@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diseño Biofílico · Universo Guguiarte</title>
+<meta name="description" content="Arte biofílico a la carta para espacios: instalaciones, cuadros y murales 3D, pintura y lámparas hechas a mano con materiales 100% naturales y sostenibles, en Madrid."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
+<style>
+  :root{ --cream:#efe6d9; --green:#33413a; --ink:#3f3428; --terra:#b06a45; --soft:#6f5c46; --mute:#938a7d; }
+  body{background:var(--cream);color:var(--ink);font-family:'Cormorant',serif;}
+  .wash{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+        -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);
+        mask-image:linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);}
+  .bodoni{font-family:'Cormorant',serif;}
+  .sans{font-family:'Jost',sans-serif;}
+  .material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;}
+  .script{font-family:'Libre Caslon Text',serif;font-style:italic;font-weight:400;}
+  .corm{font-family:'Cormorant',serif;}
+  .lab{font-family:'Cormorant',serif;text-transform:uppercase;letter-spacing:.22em;}
+  .rise{opacity:0;transform:translateY(20px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);}
+  .rise.in{opacity:1;transform:none;}
+  .petalo{position:absolute;pointer-events:none;user-select:none;z-index:1;mix-blend-mode:multiply;}
+  .grain-green,.grain-terra,.grain-cream{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.3'/%3E%3C/svg%3E");
+    background-size:230px 230px;background-blend-mode:multiply;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+  .grain-green{background-color:#33413a;filter:drop-shadow(0 1px 0 rgba(255,255,255,.3));}
+  .grain-terra{background-color:#b06a45;filter:drop-shadow(0 1px 0 rgba(255,255,255,.3));}
+  .grain-cream{background-color:#efe6d9;filter:drop-shadow(0 1px 0 rgba(0,0,0,.28));}
+  .glink{display:inline-flex;align-items:center;gap:.7rem;font-family:'Cormorant',serif;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--ink);border-bottom:1px solid rgba(63,52,40,.55);padding-bottom:4px;}
+  .glink .arw{display:inline-block;transition:transform .3s;}
+  .glink:hover .arw{transform:translateX(5px);}
+  .sym{font-family:'Cormorant',serif;color:var(--terra);font-size:.5em;vertical-align:.35em;margin-right:.5em;}
+  .plate{background:#f6efe2;padding:12px;border:1px solid rgba(63,52,40,.3);box-shadow:0 24px 54px rgba(63,52,40,.16);}
+  .plate img{display:block;width:100%;}
+  .biocard{background:rgba(246,239,226,.6);border:1px solid rgba(63,52,40,.2);padding:26px;text-align:center;transition:box-shadow .4s,transform .4s;}
+  .biocard:hover{box-shadow:0 20px 44px rgba(63,52,40,.14);transform:translateY(-3px);}
+  /* muro de logos · confían en Guguiarte */
+  .logowall{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(63,52,40,.12);border:1px solid rgba(63,52,40,.12);}
+  @media(min-width:640px){.logowall{grid-template-columns:repeat(3,1fr);}}
+  @media(min-width:1024px){.logowall{grid-template-columns:repeat(4,1fr);}}
+  .logo-cell{background:#fff;display:flex;align-items:center;justify-content:center;min-height:118px;padding:18px;}
+  .logo-img{max-height:54px;max-width:82%;width:auto;object-fit:contain;}
+  .logo-name{display:none;align-items:center;justify-content:center;font-family:'Cormorant',serif;font-weight:600;font-size:21px;letter-spacing:.01em;color:var(--green);text-align:center;line-height:1.12;}
+  /* tarjetas de co-crear · imagen + rótulo */
+  .cocard{position:relative;overflow:hidden;display:block;aspect-ratio:3/4;background:#5a6b5f;}
+  .cocard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);}
+  .cocard:hover img{transform:scale(1.06);}
+  .cocard::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(43,55,49,.78),rgba(43,55,49,.18) 52%,rgba(43,55,49,.05));}
+  .cocard .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 18px;text-align:center;}
+  .cocard .cap .ov{display:block;font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:10px;color:rgba(239,230,217,.9);margin-bottom:7px;}
+  .cocard .cap h4{font-family:'Cormorant',serif;font-weight:600;font-size:30px;line-height:1.06;color:#efe6d9;text-shadow:0 1px 14px rgba(0,0,0,.4);}
+  /* uso · para qué y dónde */
+  .usecard{background:rgba(255,255,255,.55);border:1px solid rgba(63,52,40,.16);padding:30px 32px;}
+  .useitem{font-family:'Cormorant',serif;font-size:19px;line-height:1.5;color:var(--ink);padding-left:26px;position:relative;margin-bottom:11px;}
+  .useitem::before{content:'';position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--terra);}
+  /* formulario */
+  .flabel{display:block;font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10px;color:var(--soft);margin-bottom:6px;}
+  .finput{width:100%;background:#fff;border:1px solid rgba(63,52,40,.25);padding:12px 14px;font-family:'Cormorant',serif;font-size:18px;color:var(--ink);outline:none;transition:border-color .3s;}
+  .finput:focus{border-color:var(--terra);}
+  textarea.finput{resize:vertical;min-height:120px;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ HEADER · MENÚ (común) ============ -->
+<header class="w-full border-b bg-white sans relative overflow-hidden" style="border-color:rgba(63,52,40,.14);">
+  <img src="menu_flores.png" alt="" class="absolute top-0 left-0 w-full h-auto pointer-events-none select-none" style="opacity:.13;mix-blend-mode:multiply;z-index:0;-webkit-mask-image:linear-gradient(to right, #000 0%, #000 11%, rgba(0,0,0,.35) 20%, transparent 38%, transparent 60%, #000 78%, #000 100%);mask-image:linear-gradient(to right, #000 0%, #000 11%, rgba(0,0,0,.35) 20%, transparent 38%, transparent 60%, #000 78%, #000 100%);"/>
+  <img src="decor/IMG_0036.png" alt="" class="hidden md:block absolute inset-y-0 my-auto left-[17%] lg:left-[20%] h-[175%] w-auto pointer-events-none select-none" style="opacity:.15;mix-blend-mode:multiply;z-index:0;"/>
+  <div class="relative z-10 flex items-center justify-center px-5 md:px-14 py-1.5 max-w-[1320px] mx-auto">
+    <div class="hidden md:flex items-center gap-4 absolute left-5 md:left-14 top-1/2 -translate-y-1/2 sans text-[11px] uppercase tracking-[0.2em]" style="color:var(--soft);">
+      <a class="hover:opacity-70" href="#">Mi cuenta</a>
+      <span aria-hidden="true" style="width:1px;height:11px;background:currentColor;opacity:.45;display:inline-block;"></span>
+      <a class="hover:opacity-70" href="diario.html">Blog</a>
+    </div>
+    <a href="home_guguiarte_mix.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full"/></a>
+    <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
+      <a class="material-symbols-outlined text-[21px]" href="#" title="Buscar">search</a>
+      <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
+      <button type="button" class="material-symbols-outlined text-[23px] md:hidden" style="background:none;border:0;cursor:pointer;color:inherit;padding:0;" onclick="document.getElementById('mobmenu').classList.toggle('hidden')">menu</button>
+    </div>
+  </div>
+  <nav class="hidden md:flex justify-center gap-9 border-t py-3.5 sans text-[12px] uppercase tracking-[0.18em] relative z-10 bg-white/70" style="border-color:rgba(63,52,40,.14); color:var(--soft);">
+    <a class="hover:opacity-70" href="sobre-gugui.html">Sobre Gugui</a>
+    <a class="hover:opacity-70" href="talleres.html">Talleres</a>
+    <a class="hover:opacity-70" href="experiencias.html">Experiencias</a>
+    <a class="hover:opacity-70" style="color:var(--terra);" href="diseno-biofilico.html">Diseño biofílico</a>
+    <a class="hover:opacity-70" href="comunidad.html">Comunidad</a>
+    <a class="hover:opacity-70" href="https://guguiarte.substack.com/" target="_blank" rel="noopener">Diario</a>
+    <a class="hover:opacity-70" href="tienda.html">Tienda</a>
+    <a class="hover:opacity-70" href="contacto.html">Contacto</a>
+  </nav>
+  <nav id="mobmenu" class="md:hidden hidden border-t sans text-[13px] uppercase tracking-[0.18em] bg-white relative z-20" style="border-color:rgba(63,52,40,.14);color:var(--soft);">
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="sobre-gugui.html">Sobre Gugui</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="talleres.html">Talleres</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="experiencias.html">Experiencias</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="diseno-biofilico.html">Diseño biofílico</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="comunidad.html">Comunidad</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="https://guguiarte.substack.com/" target="_blank" rel="noopener">Diario</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="tienda.html">Tienda</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="contacto.html">Contacto</a>
+    <a class="block px-6 py-3 hover:opacity-70" href="diario.html">Blog</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden pt-20 pb-12 md:pt-28 md:pb-16" id="inicio">
+  <img src="decor/aqua_green.jpg" alt="" class="wash"/>
+  <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;top:14%;height:20%;opacity:.2;"/>
+  <img src="decor/flor_peonia.png" alt="" class="petalo hidden md:block" style="right:-3%;top:8%;height:24%;opacity:.18;"/>
+  <div class="relative z-10 max-w-[960px] mx-auto px-6 text-center">
+    <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">❈</span>arte vivo para tus espacios</p>
+    <h1 class="grain-green bodoni font-medium text-[50px] md:text-[96px] leading-none tracking-[0.02em]">DISEÑO <span class="grain-terra">BIOFÍLICO</span></h1>
+    <div class="my-6 mx-auto" style="max-width:280px;height:1px;background:var(--green);opacity:.5;"></div>
+    <p class="corm italic text-[20px] md:text-[24px] max-w-[560px] mx-auto" style="color:var(--ink);">Arte hecho a mano con materiales naturales, para espacios que cuidan a quien los habita.</p>
+  </div>
+</section>
+
+<!-- ============ QUÉ ES ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="que-es">
+  <img src="decor/aqua_meadow.jpg" alt="" class="wash"/>
+  <img src="decor/flor_peonia.png" alt="" class="petalo hidden md:block" style="right:-3%;top:8%;height:24%;opacity:.2;"/>
+  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="rise text-center md:text-left">
+      <p class="lab text-[12px] mb-3" style="color:var(--terra);">Qué es</p>
+      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[54px] leading-[0.98] tracking-[0.01em] mb-5">CONECTAR CON LA <span class="grain-terra">NATURALEZA</span></h2>
+      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mx-auto md:mx-0 mb-4" style="color:var(--ink);">Co-creamos experiencias indirectas con la naturaleza a través del arte biofílico para espacios: escenas, paisajes, formas, colores y texturas que la evocan, para mejorar la calidad de vida de quienes los habitan.</p>
+      <p class="corm text-[17px] md:text-[19px] leading-[1.55] max-w-[460px] mx-auto md:mx-0" style="color:var(--soft);">Solo usamos materiales 100 % naturales, que estimulan la mente de forma positiva y que además son sostenibles y duraderos.</p>
+      <p class="script text-[23px] md:text-[28px] mt-6" style="color:var(--terra);">sostenibles y honestos, para conectar, convivir y compartir</p>
+    </div>
+    <div class="rise flex justify-center md:justify-end">
+      <div class="plate" style="max-width:440px;width:100%;"><img src="fotos/jardin_silvestre.jpg" alt="Naturaleza viva que inspira el diseño biofílico de Guguiarte" style="aspect-ratio:4/5;object-fit:cover;" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTE A LA CARTA · foto + texto ============ -->
+<section class="relative overflow-hidden py-16 md:py-24">
+  <img src="decor/aqua_cream.jpg" alt="" class="wash"/>
+  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="rise order-2 md:order-1">
+      <div class="plate"><img src="https://guguiarte.com/wp-content/uploads/2021/05/2_01.jpg" alt="Pieza biofílica artesanal de Guguiarte" loading="lazy"/></div>
+    </div>
+    <div class="rise text-center md:text-left order-1 md:order-2">
+      <p class="lab text-[12px] mb-3" style="color:var(--terra);">Un nuevo concepto de arte</p>
+      <h2 class="grain-green bodoni font-medium text-[32px] md:text-[50px] leading-[0.98] tracking-[0.01em] mb-5">ARTE BIOFÍLICO <span class="grain-terra">A LA CARTA</span></h2>
+      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mx-auto md:mx-0 mb-4" style="color:var(--ink);">Todas las piezas e instalaciones son 100 % personalizables, realizadas artesanalmente con materiales naturales y sostenibles. Salen de nuestras manos, pero nacen de ti: pensadas en exclusiva para tu proyecto, se funden en tu diseño.</p>
+      <p class="corm italic text-[19px] md:text-[22px] max-w-[460px] mx-auto md:mx-0" style="color:var(--soft);">100 % customizable · 100 % artesanal · 100 % sostenible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ CO-CREAMOS ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="que-cocreamos">
+  <img src="decor/aqua_peach.jpg" alt="" class="wash"/>
+  <img src="decor/flor_rosa.png" alt="" class="petalo hidden md:block" style="left:-2%;top:10%;height:22%;opacity:.2;"/>
+  <div class="relative z-10 max-w-[1160px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 rise">
+      <p class="script text-[28px] md:text-[36px] leading-none mb-1" style="color:var(--terra);"><span class="sym">❦</span>qué te gustaría</p>
+      <h2 class="grain-green bodoni font-medium text-[42px] md:text-[68px] leading-none tracking-[0.02em]">CO-CREAR</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 max-w-[1000px] mx-auto rise">
+      <a href="contacto.html" class="cocard w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BE0uiexylMHyxlOup6VTeA66cM/hf_20260712_105919_de4f5632-a7a7-4b43-a428-28a725a37434.png" alt="Instalaciones biofílicas de Guguiarte" loading="lazy" onerror="this.style.display='none';"/>
+        <div class="cap"><span class="ov">Arte biofílico</span><h4>Instalaciones biofílicas</h4></div>
+      </a>
+      <a href="contacto.html" class="cocard w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BE0uiexylMHyxlOup6VTeA66cM/hf_20260712_105931_1d3d5be4-a1cf-4d18-a71d-2a92432e32de.png" alt="Cuadros y murales biofílicos 3D · arte vivo" loading="lazy" onerror="this.style.display='none';"/>
+        <div class="cap"><span class="ov">Arte biofílico</span><h4>Cuadros y murales 3D · arte vivo</h4></div>
+      </a>
+      <a href="contacto.html" class="cocard w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+        <img src="fotos/composicion_seca.jpg" alt="Decoración artística biofílica 360º" loading="lazy" onerror="this.style.display='none';"/>
+        <div class="cap"><span class="ov">Arte biofílico</span><h4>Decoración artística 360º</h4></div>
+      </a>
+      <a href="contacto.html" class="cocard w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+        <img src="fotos/mesa_flores_secas.jpg" alt="Pintura abstracta biofílica" loading="lazy" onerror="this.style.display='none';"/>
+        <div class="cap"><span class="ov">Arte biofílico</span><h4>Pintura abstracta biofílica</h4></div>
+      </a>
+      <a href="contacto.html" class="cocard w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+        <img src="img_1803.jpg" alt="Lámparas y piezas artesanales biofílicas" loading="lazy" onerror="this.style.display='none';"/>
+        <div class="cap"><span class="ov">Arte biofílico</span><h4>Lámparas artesanales biofílicas</h4></div>
+      </a>
+    </div>
+    <p class="text-center corm text-[18px] md:text-[21px] leading-[1.55] max-w-[680px] mx-auto mt-12 rise" style="color:var(--ink);">Nos ponemos al servicio de tu imaginación para plasmar fielmente el concepto de tu proyecto de interiorismo. Nuestro lema: <em class="italic">si lo puedes imaginar, lo podemos hacer</em>.</p>
+  </div>
+</section>
+
+<!-- ============ PARA QUÉ Y DÓNDE ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="para-que">
+  <img src="decor/aqua_meadow.jpg" alt="" class="wash"/>
+  <img src="decor/flor_peonia.png" alt="" class="petalo hidden md:block" style="right:-3%;top:8%;height:22%;opacity:.16;"/>
+  <div class="relative z-10 max-w-[1080px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 rise">
+      <p class="script text-[28px] md:text-[36px] leading-none mb-1" style="color:var(--terra);"><span class="sym">❦</span>naturaleza que se siente</p>
+      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[64px] leading-none tracking-[0.02em]">PARA QUÉ Y DÓNDE</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 rise">
+      <div class="usecard">
+        <div class="mb-6" style="overflow:hidden;margin:-30px -32px 24px;"><img src="fotos/mujer_con_flor.jpg" alt="Bienestar y calma al vivir rodeada de naturaleza" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy"/></div>
+        <p class="lab text-[12px] mb-4" style="color:var(--terra);">Para qué sirve</p>
+        <p class="useitem">Trae calma y bienestar: la presencia de la naturaleza reduce el estrés y la ansiedad.</p>
+        <p class="useitem">Mejora la concentración y el estado de ánimo de quienes habitan el espacio.</p>
+        <p class="useitem">Conecta con lo natural sin mantenimiento: nada que regar ni cuidar.</p>
+        <p class="useitem">Da carácter y alma a un espacio, con piezas únicas hechas a mano.</p>
+        <p class="useitem">Sostenible y duradero: materiales 100 % naturales que perduran.</p>
+      </div>
+      <div class="usecard">
+        <div class="mb-6" style="overflow:hidden;margin:-30px -32px 24px;"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BE0uiexylMHyxlOup6VTeA66cM/hf_20260712_105919_de4f5632-a7a7-4b43-a428-28a725a37434.png" alt="Arte biofílico integrado en un espacio interior" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy"/></div>
+        <p class="lab text-[12px] mb-4" style="color:var(--terra);">Dónde encaja</p>
+        <p class="useitem">Hogares que quieren respirar naturaleza todo el año.</p>
+        <p class="useitem">Hoteles, resorts y espacios de bienestar o spa.</p>
+        <p class="useitem">Oficinas y coworkings donde cuidar a las personas.</p>
+        <p class="useitem">Restaurantes, cafeterías y locales con personalidad.</p>
+        <p class="useitem">Comercios, showrooms y escaparates que quieren emocionar.</p>
+        <p class="useitem">Eventos y proyectos de interiorismo a medida.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10 rise"><a href="#reservar" class="glink text-[14px]">Quiero una pieza para mi espacio <span class="arw">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ CASA DECOR ============ -->
+<section class="relative overflow-hidden py-16 md:py-24">
+  <img src="decor/aqua_green.jpg" alt="" class="wash"/>
+  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-10 rise">
+      <p class="lab text-[12px] mb-2" style="color:var(--terra);">Con orgullo</p>
+      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[54px] leading-none tracking-[0.01em]">CASA DECOR 2021</h2>
+      <p class="corm text-[18px] md:text-[20px] mt-3" style="color:var(--ink);">Guguiarte tuvo el honor de participar en Casa Decor con Dos De Interiorismo y U Interior Design.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 rise">
+      <div class="plate"><img src="https://guguiarte.com/wp-content/uploads/2021/05/03-00-CASA-DECOR.jpg" alt="Guguiarte en Casa Decor 2021 · Dos De Interiorismo" loading="lazy"/></div>
+      <div class="plate"><img src="https://guguiarte.com/wp-content/uploads/2021/05/03-01-CASA-DECOR.jpg" alt="Guguiarte en Casa Decor 2021 · U Interior Design" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA DISEÑADORES · foto + texto ============ -->
+<section class="relative overflow-hidden py-16 md:py-24">
+  <img src="decor/aqua_peachteal.jpg" alt="" class="wash"/>
+  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="rise">
+      <p class="lab text-[12px] mb-3" style="color:var(--terra);">Para interioristas y marcas</p>
+      <h2 class="grain-green bodoni font-medium text-[32px] md:text-[50px] leading-[0.98] tracking-[0.01em] mb-5">CO-CREAR ES <span class="grain-terra">OTRO MUNDO</span></h2>
+      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mb-4" style="color:var(--ink);">Ampliamos tu abanico de piezas únicas: colores, diseño y texturas pensados a medida para cada proyecto. Como diseñador o marca, cuentas con ventajas exclusivas al trabajar con nosotros.</p>
+      <p class="corm italic text-[19px] md:text-[22px] max-w-[460px]" style="color:var(--soft);">Ponnos a prueba.</p>
+      <a href="#reservar" class="glink text-[14px] mt-8">¿Co-creamos? <span class="arw">→</span></a>
+    </div>
+    <div class="rise">
+      <div class="plate"><img src="https://guguiarte.com/wp-content/uploads/2021/05/2_02.jpg" alt="Detalle de una pieza biofílica personalizada" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFÍAN EN GUGUIARTE · muro de logos ============ -->
+<section class="relative overflow-hidden py-16 md:py-24 bg-white" id="confian">
+  <div class="relative z-10 max-w-[1160px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-10 md:mb-14 rise">
+      <p class="lab text-[12px] mb-2" style="color:var(--terra);">Con la confianza de</p>
+      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[56px] leading-none tracking-[0.01em]">CONFÍAN EN GUGUIARTE</h2>
+    </div>
+    <div class="max-w-[1000px] mx-auto rise" style="background:#fff;padding:20px 24px;border:1px solid rgba(63,52,40,.12);box-shadow:0 24px 54px rgba(63,52,40,.10);">
+      <img src="https://guguiarte.com/wp-content/uploads/2021/04/LOGOS-COLABORATORS.jpg" alt="Marcas, medios y espacios que confían en Guguiarte: Google, Telva, El Mueble, AD, Casa Decor, Sol Meliá, Leroy Merlin, Decorex, ABC Serrano, entre otros" class="w-full block" style="mix-blend-mode:multiply;" loading="lazy"/>
+    </div>
+    <p class="text-center corm italic text-[16px] mt-8 rise" style="color:var(--mute);">Marcas, medios y espacios que han confiado en el arte biofílico de Guguiarte.</p>
+  </div>
+</section>
+
+<!-- ============ FORMULARIO · RESERVA ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="reservar">
+  <img src="decor/aqua_cream.jpg" alt="" class="wash"/>
+  <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;top:12%;height:20%;opacity:.16;"/>
+  <div class="relative z-10 max-w-[760px] mx-auto px-6">
+    <div class="text-center mb-10 rise">
+      <p class="script text-[28px] md:text-[36px] leading-none mb-1" style="color:var(--terra);"><span class="sym">✦</span>si lo puedes imaginar</p>
+      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[62px] leading-none tracking-[0.02em]">RESERVA TU PIEZA</h2>
+      <p class="corm text-[18px] md:text-[20px] leading-[1.55] mt-4" style="color:var(--ink);">Cuéntame qué te gustaría co-crear y para qué espacio. Te escribo para dar forma a tu idea, sin compromiso.</p>
+    </div>
+    <form class="rise" style="background:#fff;border:1px solid rgba(63,52,40,.14);padding:28px 26px;box-shadow:0 24px 54px rgba(63,52,40,.10);" onsubmit="return false;">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="flabel" for="f-nombre">Nombre</label>
+          <input class="finput" id="f-nombre" type="text" placeholder="Tu nombre"/>
+        </div>
+        <div>
+          <label class="flabel" for="f-email">Correo electrónico</label>
+          <input class="finput" id="f-email" type="email" placeholder="tu@correo.com"/>
+        </div>
+        <div>
+          <label class="flabel" for="f-tel">Teléfono <span style="text-transform:none;letter-spacing:0;">(opcional)</span></label>
+          <input class="finput" id="f-tel" type="tel" placeholder="+34 ..."/>
+        </div>
+        <div>
+          <label class="flabel" for="f-pieza">¿Qué te gustaría co-crear?</label>
+          <select class="finput" id="f-pieza">
+            <option>Instalación biofílica</option>
+            <option>Cuadro o mural 3D · arte vivo</option>
+            <option>Decoración artística 360º</option>
+            <option>Pintura abstracta biofílica</option>
+            <option>Lámpara artesanal biofílica</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="flabel" for="f-espacio">¿Para qué espacio?</label>
+          <select class="finput" id="f-espacio">
+            <option>Hogar</option>
+            <option>Hotel, resort o espacio de bienestar</option>
+            <option>Oficina o coworking</option>
+            <option>Restaurante o cafetería</option>
+            <option>Comercio o showroom</option>
+            <option>Evento</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="flabel" for="f-idea">Cuéntame tu idea</label>
+          <textarea class="finput" id="f-idea" placeholder="Colores, medidas, dónde iría, la sensación que buscas..."></textarea>
+        </div>
+      </div>
+      <div class="text-center mt-7">
+        <button type="submit" class="glink text-[15px]">Enviar solicitud <span class="arw">→</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="relative overflow-hidden py-24 md:py-32" id="contacto" style="background:#383c37;">
+  <img src="decor/bg_floral_oscuro.jpg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="opacity:.20;mix-blend-mode:overlay;"/>
+  <img src="decor/IMG_0091.png" alt="" class="petalo hidden md:block" style="left:-4%;bottom:0;height:80%;opacity:.10;filter:invert(1);mix-blend-mode:screen;"/>
+  <img src="decor/IMG_0089.png" alt="" class="petalo hidden md:block" style="right:-4%;top:0;height:80%;opacity:.10;filter:invert(1);mix-blend-mode:screen;"/>
+  <div class="relative z-10 max-w-[640px] mx-auto px-6 text-center">
+    <p class="script text-[30px] md:text-[38px] leading-none mb-1" style="color:#e3c79a;"><span style="font-family:'Cormorant',serif;color:#e3c79a;font-size:.5em;vertical-align:.35em;margin-right:.5em;">✳</span>cartas,</p>
+    <h2 class="grain-cream bodoni font-medium text-[38px] md:text-[62px] leading-none tracking-[0.01em] mb-6">NO NEWSLETTERS</h2>
+    <p class="corm text-[19px] md:text-[21px] leading-[1.5] mb-10" style="color:rgba(239,230,217,.9);">De vez en cuando escribo despacio: proyectos, naturaleza y arte para espacios que cuidan a quien los habita.</p>
+    <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto items-center" onsubmit="return false;">
+      <input type="email" placeholder="Tu correo electrónico" class="flex-1 w-full bg-transparent px-2 py-3 corm text-[18px] outline-none text-center sm:text-left" style="border:0;border-bottom:1px solid rgba(239,230,217,.45);color:#efe6d9;"/>
+      <button class="glink text-[15px] whitespace-nowrap" style="color:#efe6d9;border-color:rgba(239,230,217,.6);">Suscribirme <span class="arw">→</span></button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full bg-white" style="border-top:1px solid rgba(63,52,40,.14);">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-14 py-16 max-w-[1320px] mx-auto">
+    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+      <a href="home_guguiarte_mix.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-11 md:h-14 w-auto"/></a>
+      <p class="corm italic text-[18px] leading-snug" style="color:var(--soft);">No necesitas hacerlo perfecto, solo hacerlo con alma.</p>
+      <p class="sans text-[12px] uppercase tracking-[0.18em]" style="color:var(--soft);">Majadahonda, Madrid</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <h4 class="sans uppercase text-[10px] tracking-[0.22em] mb-2" style="color:var(--terra);">Explorar</h4>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="huerto.html">Huerto</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="talleres.html">Talleres</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="experiencias.html">Experiencias</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="comunidad.html">Comunidad</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="diseno-biofilico.html">Diseño biofílico</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="diario.html">Blog</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="tienda.html">Tienda</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <h4 class="sans uppercase text-[10px] tracking-[0.22em] mb-2" style="color:var(--terra);">Visítanos</h4>
+      <p class="bodoni text-[18px]" style="color:var(--ink);">El taller de Gugui<br/>Majadahonda, Madrid</p>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="https://instagram.com/iphonegugui">Instagram @iphonegugui</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <h4 class="sans uppercase text-[10px] tracking-[0.22em] mb-2" style="color:var(--terra);">Legal</h4>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="#">Aviso legal</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="#">Privacidad</a>
+      <a class="bodoni text-[18px] hover:opacity-70" style="color:var(--ink);" href="#">Cookies</a>
+    </div>
+  </div>
+  <div class="border-t py-6 px-6 md:px-14 max-w-[1320px] mx-auto flex flex-col sm:flex-row justify-between gap-3 sans uppercase text-[10px] tracking-[0.2em]" style="border-color:rgba(63,52,40,.14);color:var(--soft);">
+    <span>© 2026 Universo Guguiarte</span>
+    <span>guguiarte.com</span>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.08});
+  document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

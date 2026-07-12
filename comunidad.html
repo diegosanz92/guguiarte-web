@@ -44,6 +44,35 @@
   .thcard:hover .ph img{transform:scale(1.05);}
   .feat{font-family:'Cormorant',serif;font-size:18px;color:var(--ink);padding-left:20px;position:relative;margin-bottom:6px;}
   .feat::before{content:'✦';position:absolute;left:0;color:var(--terra);font-size:12px;top:3px;}
+  /* ===== SENDERO DEL HUERTO · horizontal ===== */
+  .sendero{position:relative;max-width:1160px;margin:0 auto;}
+  .carril{position:relative;}
+  /* móvil: sendero vertical con línea a la izquierda */
+  .carril::before{content:"";position:absolute;top:8px;bottom:8px;left:33px;border-left:2px dashed rgba(176,106,69,.5);}
+  .estacion{position:relative;padding-left:86px;margin-bottom:34px;}
+  .nodo{position:absolute;left:8px;top:0;width:54px;height:54px;border-radius:50%;background:#f6efe2;border:2px solid var(--terra);display:flex;align-items:center;justify-content:center;color:var(--terra);z-index:2;box-shadow:0 8px 20px rgba(63,52,40,.20);}
+  .nodo .material-symbols-outlined{font-size:28px;}
+  .st-card{background:rgba(246,239,226,.72);border:1px solid rgba(63,52,40,.22);overflow:hidden;transition:box-shadow .4s,transform .4s;}
+  .st-card:hover{box-shadow:0 24px 54px rgba(63,52,40,.16);transform:translateY(-3px);}
+  .st-card .ph{overflow:hidden;height:150px;}
+  .st-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s;}
+  .st-card:hover .ph img{transform:scale(1.05);}
+  .st-num{font-family:'Cormorant',serif;font-size:14px;letter-spacing:.2em;color:var(--terra);}
+  .st-links{display:flex;flex-direction:column;gap:.5rem;align-items:flex-start;}
+  .sendero-fin{position:relative;padding-left:86px;}
+  .nodo-fin{position:absolute;left:2px;top:0;width:64px;height:64px;border-radius:50%;background:var(--terra);color:#f6efe2;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(63,52,40,.28);}
+  .nodo-fin .material-symbols-outlined{font-size:34px;}
+  /* escritorio: sendero horizontal, 3 estaciones en fila */
+  @media(min-width:900px){
+    .carril{display:grid;grid-template-columns:repeat(3,1fr);gap:38px;}
+    .carril::before{top:33px;left:16%;right:16%;bottom:auto;border-left:0;border-top:2px dashed rgba(176,106,69,.5);}
+    .estacion{padding-left:0;margin-bottom:0;display:flex;flex-direction:column;align-items:center;text-align:center;}
+    .nodo{position:relative;left:auto;top:auto;margin-bottom:22px;}
+    .st-card{width:100%;}
+    .st-links{align-items:center;}
+    .sendero-fin{padding-left:0;margin-top:40px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+    .nodo-fin{position:relative;left:auto;top:auto;margin:0 auto 10px;}
+  }
 </style>
 </head>
 <body class="antialiased">
@@ -66,25 +95,25 @@
     </div>
   </div>
   <nav class="hidden md:flex justify-center gap-9 border-t py-3.5 sans text-[12px] uppercase tracking-[0.18em] relative z-10 bg-white/70" style="border-color:rgba(63,52,40,.14); color:var(--soft);">
-    <a class="hover:opacity-70" href="huerto.html">Huerto</a>
+    <a class="hover:opacity-70" href="sobre-gugui.html">Sobre Gugui</a>
     <a class="hover:opacity-70" href="talleres.html">Talleres</a>
     <a class="hover:opacity-70" href="experiencias.html">Experiencias</a>
+    <a class="hover:opacity-70" href="diseno-biofilico.html">Diseño biofílico</a>
     <a class="hover:opacity-70" style="color:var(--terra);" href="comunidad.html">Comunidad</a>
-    <a class="hover:opacity-70" href="tienda.html">Tienda</a>
     <a class="hover:opacity-70" href="https://guguiarte.substack.com/" target="_blank" rel="noopener">Diario</a>
-    <a class="hover:opacity-70" href="sobre-gugui.html">Sobre Gugui</a>
+    <a class="hover:opacity-70" href="tienda.html">Tienda</a>
     <a class="hover:opacity-70" href="contacto.html">Contacto</a>
   </nav>
   <nav id="mobmenu" class="md:hidden hidden border-t sans text-[13px] uppercase tracking-[0.18em] bg-white relative z-20" style="border-color:rgba(63,52,40,.14);color:var(--soft);">
-    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="huerto.html">Huerto</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="sobre-gugui.html">Sobre Gugui</a>
     <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="talleres.html">Talleres</a>
     <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="experiencias.html">Experiencias</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="diseno-biofilico.html">Diseño biofílico</a>
     <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="comunidad.html">Comunidad</a>
-    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="tienda.html">Tienda</a>
     <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="https://guguiarte.substack.com/" target="_blank" rel="noopener">Diario</a>
-    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="diario.html">Blog</a>
-    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="sobre-gugui.html">Sobre Gugui</a>
-    <a class="block px-6 py-3 hover:opacity-70" href="contacto.html">Contacto</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="tienda.html">Tienda</a>
+    <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="contacto.html">Contacto</a>
+    <a class="block px-6 py-3 hover:opacity-70" href="diario.html">Blog</a>
   </nav>
 </header>
 
@@ -98,12 +127,12 @@
   <img src="decor/IMG_0091.png" alt="" class="petalo hidden md:block" style="right:-4%;top:2%;height:74%;opacity:.11;"/>
   <div class="relative z-10 max-w-[960px] mx-auto px-6 text-center">
     <div class="rule mb-5" style="max-width:280px;"><div class="l1"></div><div class="l2"></div></div>
-    <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">❈</span>florecer juntas</p>
+    <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">❈</span>un jardín compartido</p>
     <h1 class="grain-green bodoni font-medium text-[54px] md:text-[104px] leading-none tracking-[0.02em]">COMUNIDAD</h1>
-    <p class="corm italic text-[20px] md:text-[24px] mt-5 max-w-[560px] mx-auto" style="color:var(--ink);">Dejas de crear sola. Una mesa de mujeres que entienden tu ritmo, sin tener que demostrar nada.</p>
+    <p class="corm italic text-[20px] md:text-[24px] mt-5 max-w-[560px] mx-auto" style="color:var(--ink);">Dejas de crear sola. Un jardín compartido donde florecer a tu ritmo, sin tener que demostrar nada.</p>
     <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 lab text-[12px]" style="color:var(--soft);">
       <a href="#que-incluye" class="hover:opacity-70">Qué incluye</a>
-      <a href="#niveles" class="hover:opacity-70">Niveles</a>
+      <a href="#camino" class="hover:opacity-70">El camino</a>
       <a href="#faq" class="hover:opacity-70">Preguntas</a>
     </div>
   </div>
@@ -122,10 +151,11 @@
       </div>
     </div>
     <div class="rise text-center md:text-left order-1 md:order-2">
-      <p class="lab text-[12px] mb-3" style="color:var(--terra);">Para quién es</p>
-      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[52px] leading-[0.98] tracking-[0.01em] mb-5">SI TÚ TAMBIÉN <span class="grain-terra">SIENTES ESTO</span></h2>
-      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mx-auto md:mx-0 mb-4" style="color:var(--ink);">Para mujeres que sienten que dejaron su creatividad en pausa, cansadas del contenido vacío, que buscan calma, sentido y pertenencia — sin rendir cuentas a nadie.</p>
-      <p class="corm italic text-[19px] md:text-[22px] max-w-[460px] mx-auto md:mx-0" style="color:var(--soft);">Aquí no tienes que demostrar nada. Solo volver a crear a tu ritmo.</p>
+      <p class="lab text-[12px] mb-3" style="color:var(--terra);">El corazón de la comunidad</p>
+      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[52px] leading-[0.98] tracking-[0.01em] mb-5">QUÉ ES SER <span class="grain-terra">MUJER JARDÍN</span></h2>
+      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mx-auto md:mx-0 mb-4" style="color:var(--ink);">Una Mujer Jardín es quien intuye que su creatividad no se perdió, solo se quedó en pausa. La que prefiere el ritmo lento a la prisa y lo imperfecto a lo pulido, y que vuelve a la naturaleza y a crear con las manos para reencontrarse consigo misma.</p>
+      <p class="corm text-[18px] md:text-[21px] leading-[1.55] max-w-[460px] mx-auto md:mx-0 mb-4" style="color:var(--ink);">En la comunidad no entras a una membresía: entras a un jardín compartido donde florecer a tu manera, a tu propio ritmo y en compañía de quienes recorren el mismo camino.</p>
+      <p class="corm italic text-[19px] md:text-[22px] max-w-[460px] mx-auto md:mx-0" style="color:var(--soft);">Aquí no tienes que demostrar nada. Solo volver a crear.</p>
     </div>
   </div>
 </section>
@@ -144,13 +174,13 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 rise">
       <div class="text-center md:text-left">
         <span class="material-symbols-outlined text-[28px] mb-2" style="color:var(--terra);">auto_stories</span>
-        <h4 class="bodoni text-[24px] mb-1" style="color:var(--green);">Contenido mensual</h4>
-        <p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">Guías, materiales y prácticas para crear en casa, al ritmo de las estaciones.</p>
+        <h4 class="bodoni text-[24px] mb-1" style="color:var(--green);">Inspiración estacional</h4>
+        <p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">Ideas, recursos y prácticas que compartimos para seguir creando en casa, al ritmo de las estaciones.</p>
       </div>
       <div class="text-center md:text-left">
         <span class="material-symbols-outlined text-[28px] mb-2" style="color:var(--terra);">diversity_1</span>
-        <h4 class="bodoni text-[24px] mb-1" style="color:var(--green);">Una mesa de mujeres</h4>
-        <p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">Grupo privado y encuentros: gente que entiende tu ritmo y celebra lo imperfecto.</p>
+        <h4 class="bodoni text-[24px] mb-1" style="color:var(--green);">Un jardín compartido</h4>
+        <p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">Grupo privado y encuentros con quienes recorren el mismo camino y celebran lo imperfecto.</p>
       </div>
       <div class="text-center md:text-left">
         <span class="material-symbols-outlined text-[28px] mb-2" style="color:var(--terra);">redeem</span>
@@ -161,77 +191,89 @@
   </div>
 </section>
 
-<!-- ============ NIVELES · tarjetas horizontales ============ -->
-<section class="relative overflow-hidden py-14 md:py-20" id="niveles">
+<!-- ============ EL CAMINO · Semilla → Raíz → Flor ============ -->
+<section class="relative overflow-hidden py-14 md:py-20" id="camino">
   <img src="decor/aqua_cream.jpg" alt="" class="wash"/>
   <img src="decor/flor_anemona.png" alt="" class="petalo hidden md:block" data-deco-extra style="position:absolute;pointer-events:none;user-select:none;z-index:1;mix-blend-mode:multiply;right:-3%;bottom:8%;height:23%;opacity:.19;"/>
   <img src="decor/IMG_0091.png" alt="" class="petalo hidden md:block" data-deco-extra style="position:absolute;pointer-events:none;user-select:none;z-index:1;mix-blend-mode:multiply;left:-4%;bottom:0;height:58%;opacity:.09;"/>
   <img src="decor/flor_anemona.png" alt="" class="petalo hidden md:block" style="right:-2%;bottom:2%;height:30%;opacity:.24;"/>
-  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-10">
-    <div class="text-center mb-11 rise">
-      <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">✽</span>elige tu nivel</p>
+  <div class="relative z-10 max-w-[1160px] mx-auto px-6 md:px-10">
+    <div class="text-center mb-4 rise">
+      <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">✽</span>así florece el camino</p>
+      <h2 class="grain-green bodoni font-medium text-[46px] md:text-[76px] leading-none tracking-[0.02em]">EL CAMINO</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
+    <p class="text-center corm text-[18px] md:text-[21px] leading-[1.55] max-w-[620px] mx-auto mb-12 rise" style="color:var(--ink);">No hay niveles ni cuotas: hay un recorrido. Tres momentos por los que pasa toda Mujer Jardín. Mira el camino y elige por dónde empezar — no hay prisa, solo la que marca tu propia estación.</p>
 
-      <!-- SEMILLA -->
-      <article class="thcard rise group flex flex-col">
-        <div class="ph relative h-48">
-          <img src="fotos/huerto_dalias.jpg" alt="Nivel Semilla" class="absolute inset-0 w-full h-full object-cover"/>
-          <span class="lab absolute top-4 left-4 text-[11px] px-3 py-1.5" style="background:#f6efe2;color:var(--green);letter-spacing:.15em;">nivel de entrada</span>
-        </div>
-        <div class="p-7 md:p-8 flex flex-col flex-1">
-          <h3 class="grain-green bodoni font-medium text-[40px] md:text-[48px] leading-none tracking-[0.01em]">SEMILLA</h3>
-          <p class="script text-[21px] mt-1 mb-3" style="color:var(--soft);">empezar a florecer</p>
-          <p class="corm mb-4" style="color:var(--terra);"><span class="text-[34px]">20 €</span><span class="text-[15px]" style="color:var(--soft);">/mes</span></p>
-          <div class="mb-6">
-            <p class="feat">Contenido mensual para crear en casa</p>
-            <p class="feat">Grupo privado y encuentros</p>
-            <p class="feat">Regalo de bienvenida a casa</p>
-          </div>
-          <a href="#" class="glink text-[13px] mt-auto self-start">Unirme <span class="arw">→</span></a>
-        </div>
-      </article>
+    <div class="sendero">
 
-      <!-- RAÍZ (recomendado) -->
-      <article class="thcard rise group flex flex-col md:-mt-4 md:mb-4" style="border:2px solid var(--terra);box-shadow:0 24px 54px rgba(63,52,40,.16);">
-        <div class="ph relative h-48">
-          <img src="fotos/dalia_crema.jpg" alt="Nivel Raíz" class="absolute inset-0 w-full h-full object-cover"/>
-          <span class="lab absolute top-4 left-4 text-[11px] px-3 py-1.5" style="background:var(--terra);color:#fff;letter-spacing:.15em;">recomendado</span>
-        </div>
-        <div class="p-7 md:p-8 flex flex-col flex-1">
-          <h3 class="grain-green bodoni font-medium text-[40px] md:text-[48px] leading-none tracking-[0.01em]">RAÍZ</h3>
-          <p class="script text-[21px] mt-1 mb-3" style="color:var(--soft);">echar raíces hondas</p>
-          <p class="corm mb-4" style="color:var(--terra);"><span class="text-[34px]">30 €</span><span class="text-[15px]" style="color:var(--soft);">/mes</span></p>
-          <div class="mb-6">
-            <p class="feat">Todo lo de Semilla, y además:</p>
-            <p class="feat">Prioridad en talleres y retiros</p>
-            <p class="feat">Descuentos en la tienda</p>
-            <p class="feat">Encuentros extra y acompañamiento cercano</p>
-          </div>
-          <a href="#" class="glink text-[13px] mt-auto self-start">Unirme <span class="arw">→</span></a>
-        </div>
-      </article>
+      <!-- inicio del sendero -->
+      <p class="lab text-[11px] text-center mb-10 rise" style="color:var(--soft);letter-spacing:.24em;">· recorre el camino de principio a fin ·</p>
 
-      <!-- ALUMNA HONORARIA -->
-      <article class="thcard rise group flex flex-col">
-        <div class="ph relative h-48">
-          <img src="fotos/mujer_dalia_cara.jpg" alt="Alumna Honoraria" class="absolute inset-0 w-full h-full object-cover"/>
-          <span class="lab absolute top-4 left-4 text-[11px] px-3 py-1.5" style="background:#f6efe2;color:var(--green);letter-spacing:.15em;">ex-alumnas</span>
-        </div>
-        <div class="p-7 md:p-8 flex flex-col flex-1">
-          <h3 class="grain-green bodoni font-medium text-[32px] md:text-[38px] leading-[0.95] tracking-[0.01em]">ALUMNA <span class="grain-terra">HONORARIA</span></h3>
-          <p class="script text-[21px] mt-1 mb-3" style="color:var(--soft);">seguir en la mesa</p>
-          <p class="corm mb-4" style="color:var(--terra);"><span class="text-[34px]">19 €</span><span class="text-[15px]" style="color:var(--soft);">/mes</span></p>
-          <div class="mb-6">
-            <p class="feat">Para quien ya pasó por un taller</p>
-            <p class="feat">Acceso al grupo y a los encuentros</p>
+      <div class="carril">
+      <!-- PASO 01 · SEMILLA -->
+      <div class="estacion rise">
+        <div class="nodo"><span class="material-symbols-outlined">eco</span></div>
+        <article class="st-card">
+          <div class="ph"><img src="fotos/huerto_dalias.jpg" alt="Etapa Semilla: dar el primer paso"/></div>
+          <div class="p-6 md:p-7">
+            <p class="st-num mb-1">PASO 01 · empiezas aquí</p>
+            <h3 class="grain-green bodoni font-medium text-[36px] md:text-[44px] leading-none tracking-[0.01em]">SEMILLA</h3>
+            <p class="script text-[20px] mt-1 mb-3" style="color:var(--soft);">plantar la primera semilla</p>
+            <p class="corm text-[17px] leading-[1.55] mb-4" style="color:var(--ink);">Das el primer paso. Te animas a abrirte a un camino nuevo, más honesto y creativo. Entras a la comunidad a través de tu <strong style="font-weight:600;">primer taller</strong> o del programa de varias sesiones.</p>
+            <div class="st-links">
+              <a href="taller-flor-prensada.html" class="glink text-[12px]">Taller de Flor Prensada <span class="arw">→</span></a>
+              <a href="talleres.html" class="glink text-[12px]">Ver todos los talleres <span class="arw">→</span></a>
+            </div>
           </div>
-          <a href="#" class="glink text-[13px] mt-auto self-start">Unirme <span class="arw">→</span></a>
-        </div>
-      </article>
+        </article>
+      </div>
+
+      <!-- PASO 02 · RAÍZ -->
+      <div class="estacion der rise">
+        <div class="nodo"><span class="material-symbols-outlined">potted_plant</span></div>
+        <article class="st-card">
+          <div class="ph"><img src="fotos/campo_contraluz.jpg" alt="Etapa Raíz: echar raíces con las experiencias"/></div>
+          <div class="p-6 md:p-7">
+            <p class="st-num mb-1">PASO 02 · echas raíces</p>
+            <h3 class="grain-green bodoni font-medium text-[36px] md:text-[44px] leading-none tracking-[0.01em]">RAÍZ</h3>
+            <p class="script text-[20px] mt-1 mb-3" style="color:var(--soft);">echar raíces hondas</p>
+            <p class="corm text-[17px] leading-[1.55] mb-4" style="color:var(--ink);">Empiezas a sentir tu creatividad y a esa nueva mujer que echa raíces. Es el momento de vivir tu <strong style="font-weight:600;">primera experiencia</strong>: una jornada de un día, el forrajeo o el retiro de tres días.</p>
+            <div class="st-links">
+              <a href="experiencias.html" class="glink text-[12px]">Experiencia de un día <span class="arw">→</span></a>
+              <a href="experiencias.html" class="glink text-[12px]">Forrajeo y retiro de 3 días <span class="arw">→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PASO 03 · FLOR -->
+      <div class="estacion izq rise">
+        <div class="nodo"><span class="material-symbols-outlined">local_florist</span></div>
+        <article class="st-card">
+          <div class="ph"><img src="fotos/mujer_dalia_cara.jpg" alt="Etapa Flor: florecer y compartir"/></div>
+          <div class="p-6 md:p-7">
+            <p class="st-num mb-1">PASO 03 · floreces</p>
+            <h3 class="grain-green bodoni font-medium text-[36px] md:text-[44px] leading-none tracking-[0.01em]">FLOR</h3>
+            <p class="script text-[20px] mt-1 mb-3" style="color:var(--soft);">florecer y compartir</p>
+            <p class="corm text-[17px] leading-[1.55] mb-4" style="color:var(--ink);">Compartes lo que sabes y tus propias obras, y te sumas al <strong style="font-weight:600;">mercadillo solidario</strong> y a los encuentros. Lo que un día recibiste, ahora lo siembras en otras.</p>
+            <div class="st-links">
+              <a href="tienda.html" class="glink text-[12px]">Compartir tus obras <span class="arw">→</span></a>
+              <a href="contacto.html" class="glink text-[12px]">Sumarte al mercadillo <span class="arw">→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      </div><!-- /carril -->
+
+      <!-- fin del sendero -->
+      <div class="sendero-fin rise">
+        <div class="nodo-fin"><span class="material-symbols-outlined">diversity_1</span></div>
+        <p class="script text-[24px] md:text-[30px] leading-none mt-2" style="color:var(--terra);">y ya eres parte del jardín</p>
+      </div>
 
     </div>
-    <p class="text-center corm italic text-[16px] mt-8 rise" style="color:var(--mute);">Precios de lanzamiento · plazas limitadas. Puedes darte de baja cuando quieras.</p>
+    <p class="text-center corm italic text-[17px] mt-10 rise" style="color:var(--soft);">La comunidad es gratuita: se entra creando. Elige tu primer taller o experiencia y empieza a recorrer el camino.</p>
+    <div class="text-center mt-6 rise"><a href="talleres.html" class="glink text-[15px]">Empezar por un taller <span class="arw">→</span></a></div>
   </div>
 </section>
 
@@ -253,7 +295,7 @@
         </div>
         <div class="text-left">
           <blockquote class="corm italic text-[22px] md:text-[25px] leading-[1.38] mb-2" style="color:var(--ink);">«El único sitio donde no tengo que justificar mi ritmo.»</blockquote>
-          <figcaption class="lab text-[11px]" style="color:var(--terra);letter-spacing:.22em;">Lucía · nivel Raíz</figcaption>
+          <figcaption class="lab text-[11px]" style="color:var(--terra);letter-spacing:.22em;">Lucía · etapa Raíz</figcaption>
         </div>
       </figure>
       <figure class="rise flex items-start gap-5 md:gap-6">
@@ -262,7 +304,7 @@
         </div>
         <div class="text-left">
           <blockquote class="corm italic text-[22px] md:text-[25px] leading-[1.38] mb-2" style="color:var(--ink);">«Dejé de crear sola. Ahora tengo mesa y compañía.»</blockquote>
-          <figcaption class="lab text-[11px]" style="color:var(--terra);letter-spacing:.22em;">Ana · nivel Semilla</figcaption>
+          <figcaption class="lab text-[11px]" style="color:var(--terra);letter-spacing:.22em;">Ana · etapa Semilla</figcaption>
         </div>
       </figure>
     </div>
@@ -290,11 +332,11 @@
         <p class="corm text-[18px] leading-[1.5] md:col-span-2" style="color:var(--ink);">Hay contenido y grupo online, pero también encuentros presenciales y prioridad en los talleres del taller de Gugui.</p>
       </div>
       <div class="py-6 grid md:grid-cols-3 gap-3" style="border-color:rgba(63,52,40,.18);">
-        <h4 class="bodoni text-[22px] md:col-span-1" style="color:var(--green);">¿Puedo darme de baja?</h4>
-        <p class="corm text-[18px] leading-[1.5] md:col-span-2" style="color:var(--ink);">Cuando quieras, sin permanencia. Es una mesa a la que vuelves porque te apetece, no por obligación.</p>
+        <h4 class="bodoni text-[22px] md:col-span-1" style="color:var(--green);">¿Tiene algún coste?</h4>
+        <p class="corm text-[18px] leading-[1.5] md:col-span-2" style="color:var(--ink);">La comunidad es gratuita: se entra creando. Tu llave es un taller o una experiencia — a partir de ahí formas parte del jardín, sin cuotas ni permanencia.</p>
       </div>
     </div>
-    <div class="text-center mt-12 rise"><a href="#niveles" class="glink text-[15px]">Cruza la puerta <span class="arw">→</span></a></div>
+    <div class="text-center mt-12 rise"><a href="#camino" class="glink text-[15px]">Ver el camino <span class="arw">→</span></a></div>
   </div>
 </section>
 
