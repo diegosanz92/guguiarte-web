@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contacto · Universo Guguiarte</title>
-<meta name="description" content="Escríbele a Gugui: dudas sobre talleres, encargos, colaboraciones o visitas al taller y huerto en Majadahonda (Madrid)."/>
+<title>Retiro de 3 días · Universo Guguiarte</title>
+<meta name="description" content="Programa de 5 sesiones de flor prensada en el taller de Gugui, en Majadahonda (Madrid). Recolectar, prensar y componer flores del huerto hasta convertirlas en arte botánico."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -39,12 +39,16 @@
   .glink .arw{display:inline-block;transition:transform .3s;}
   .glink:hover .arw{transform:translateX(5px);}
   .sym{font-family:'Bodoni Moda',serif;color:var(--terra);font-size:.5em;vertical-align:.35em;margin-right:.5em;}
+  .crumb{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--soft);}
+  .step{border-top:1px solid rgba(63,52,40,.2);}
+  .step:last-child{border-bottom:1px solid rgba(63,52,40,.2);}
+  .incl{display:flex;gap:.85rem;align-items:flex-start;}
+  .incl .material-symbols-outlined{color:var(--terra);font-size:22px;margin-top:2px;}
+  .prow{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px dashed rgba(63,52,40,.3);padding:14px 0;}
   .btn-solid{display:inline-flex;align-items:center;gap:.7rem;background:var(--green);color:#efe6d9;font-family:'Bodoni Moda',serif;text-transform:uppercase;letter-spacing:.2em;font-size:14px;padding:14px 30px;transition:background .3s;}
   .btn-solid:hover{background:#26312b;}
   .fin{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(63,52,40,.4);padding:10px 2px;font-family:'Bodoni Moda',serif;font-size:18px;color:var(--ink);outline:none;}
   .fin::placeholder{color:var(--mute);}
-  .cchan{display:flex;gap:1rem;align-items:flex-start;}
-  .cchan .material-symbols-outlined{color:var(--terra);font-size:26px;margin-top:2px;}
   .wash{display:none!important;}
   /* titulos pequenos/medianos mas gruesos (Bodoni es fino en pequeno) */
   h2.bodoni,h2.disp{font-weight:600!important;}
@@ -78,7 +82,7 @@
     <a class="hover:opacity-70" href="comunidad.html">Comunidad</a>
     <a class="hover:opacity-70" href="https://guguiarte.substack.com/" target="_blank" rel="noopener">Diario</a>
     <a class="hover:opacity-70" href="tienda.html">Tienda</a>
-    <a class="hover:opacity-70" style="color:var(--terra);" href="contacto.html">Contacto</a>
+    <a class="hover:opacity-70" href="contacto.html">Contacto</a>
   </nav>
   <nav id="mobmenu" class="md:hidden hidden border-t sans text-[13px] uppercase tracking-[0.18em] bg-white relative z-20" style="border-color:rgba(63,52,40,.14);color:var(--soft);">
     <a class="block px-6 py-3 border-b hover:opacity-70" style="border-color:rgba(63,52,40,.08);" href="sobre-gugui.html">Sobre Gugui</a>
@@ -94,102 +98,105 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="relative overflow-hidden pt-20 pb-12 md:pt-28 md:pb-16" id="inicio">
-  <img src="decor/mariposa.png" alt="" class="hidden md:block" data-flores-new style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:2%;top:8%;width:180px;opacity:.9;"/>
-  <img src="decor/libelula.png" alt="" class="hidden md:block" style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:1%;bottom:6%;width:230px;opacity:.85;"/>
-  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;bottom:0%;height:38%;"/>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden pt-16 pb-12 md:pt-20 md:pb-16" id="inicio">
+  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:14%;height:48%;"/>
+  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;bottom:6%;height:44%;transform:scaleX(-1);"/>
 
-  <img src="decor/aqua_peach.jpg" alt="" class="wash"/>
-  <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;bottom:2%;height:30%;opacity:.26;"/>
-  <img src="decor/flor_peonia.png" alt="" class="petalo hidden md:block" style="right:-2%;top:10%;height:22%;opacity:.2;"/>
-  <img src="decor/IMG_0100.png" alt="" class="petalo hidden md:block" style="right:-4%;bottom:0;height:70%;opacity:.11;"/>
   <div class="relative z-10 max-w-[900px] mx-auto px-6 text-center">
-    <div class="rule mb-5" style="max-width:280px;"><div class="l1"></div><div class="l2"></div></div>
-    <p class="script text-[28px] md:text-[36px] leading-none" style="color:var(--terra);"><span class="sym">✽</span>hablemos</p>
-    <h1 class="grain-green bodoni font-medium text-[54px] md:text-[104px] leading-none tracking-[0.02em]">CONTACTO</h1>
-    <p class="corm italic text-[20px] md:text-[24px] mt-5 max-w-[560px] mx-auto" style="color:var(--ink);">¿Una duda sobre un taller, un encargo o una colaboración? Escríbeme sin prisa; te respondo yo misma.</p>
-  </div>
-</section>
-
-<!-- ============ FORMULARIO ============ -->
-<section class="relative overflow-hidden py-16 md:py-24" id="form">
-  <img src="decor/flor_salvia.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:2%;height:56%;transform:scaleX(-1);"/>
-
-
-
-
-  <img src="decor/aqua_meadow.jpg" alt="" class="wash"/>
-  <img src="decor/flor_rosa.png" alt="" class="petalo hidden md:block" style="left:-2%;top:10%;height:22%;opacity:.18;"/>
-  <img src="decor/flor_calida.png" alt="" class="petalo hidden md:block" style="right:-2%;bottom:6%;height:20%;opacity:.16;"/>
-  <div class="relative z-10 max-w-[720px] mx-auto px-6">
-    <div class="text-center mb-10 rise">
-      <p class="script text-[28px] md:text-[36px] leading-none mb-1" style="color:var(--terra);"><span class="sym">❦</span>escríbeme</p>
-      <h2 class="grain-green bodoni font-medium text-[38px] md:text-[58px] leading-none tracking-[0.02em]">CUÉNTAME</h2>
+    <a href="experiencias.html" class="lab text-[11px] inline-block mb-5" style="color:var(--terra);">← Experiencias</a>
+    <p class="script text-[30px] md:text-[42px] leading-none mb-1" style="color:var(--terra);"><span class="sym">✽</span>parar</p>
+    <h1 class="grain-green bodoni font-medium text-[52px] md:text-[104px] leading-[0.9] tracking-[0.02em]">RETIRO DE <span class="grain-terra">3 DÍAS</span></h1>
+    <p class="script text-[24px] md:text-[30px] mt-3" style="color:var(--soft);">tres días para volver distinta</p>
+    <p class="corm text-[19px] md:text-[22px] leading-[1.55] max-w-[600px] mx-auto mt-6" style="color:var(--ink);">Arte, naturaleza y calma durante tres días. Un paréntesis para crear con las manos, caminar el huerto y recordar tu propio ritmo.</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-8">
+      <a href="#reservar" class="glink text-[14px]">Reservar plaza <span class="arw">→</span></a>
+      <span class="lab text-[11px]" style="color:var(--soft);">Cada 6 meses · 3 días</span>
+      <span class="corm text-[24px]" style="color:var(--terra);">Por confirmar</span>
     </div>
-    <form class="text-left grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7 rise" onsubmit="return false;">
-      <div><label class="lab text-[11px] block mb-2" style="color:var(--soft);">Tu nombre</label><input type="text" class="fin" placeholder="Cómo te llamas"/></div>
-      <div><label class="lab text-[11px] block mb-2" style="color:var(--soft);">Tu correo</label><input type="email" class="fin" placeholder="tu@correo.com"/></div>
-      <div class="sm:col-span-2"><label class="lab text-[11px] block mb-2" style="color:var(--soft);">Asunto</label><input type="text" class="fin" placeholder="Taller, encargo, colaboración…"/></div>
-      <div class="sm:col-span-2"><label class="lab text-[11px] block mb-2" style="color:var(--soft);">Tu mensaje</label><textarea rows="4" class="fin" style="resize:vertical;" placeholder="Cuéntame lo que necesites"></textarea></div>
-      <div class="sm:col-span-2 text-center mt-3"><button class="btn-solid">Enviar mensaje <span>→</span></button></div>
-    </form>
   </div>
 </section>
 
-<!-- ============ DÓNDE ESTAMOS + CANALES ============ -->
-<section class="relative overflow-hidden py-16 md:py-24" id="donde">
-  <img src="decor/flor_wisteria.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:26%;height:58%;"/>
+<!-- ============ IMAGEN ANCHA ============ -->
+<section class="relative overflow-hidden">
+  <img src="fotos/jardin_silvestre.jpg" alt="Retiro de 3 días" class="w-full block" style="max-height:520px;object-fit:cover;"/>
+</section>
 
+<!-- ============ ORIGEN / INTRO ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="origen">
+  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:18%;height:46%;transform:scaleX(-1);"/>
 
-
-
-  <img src="decor/aqua_cream.jpg" alt="" class="wash"/>
-  <img src="decor/flor_clavel.png" alt="" class="petalo hidden md:block" style="right:-2%;bottom:2%;height:28%;opacity:.22;"/>
-  <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;top:12%;height:20%;opacity:.18;"/>
-  <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-    <div class="rise flex justify-center md:justify-start order-2 md:order-1">
-      <div style="background:#f6efe2;padding:14px;border:1px solid rgba(63,52,40,.5);box-shadow:0 24px 54px rgba(63,52,40,.22);max-width:440px;width:100%;">
-        <div style="border:1px solid rgba(63,52,40,.3);overflow:hidden;"><img src="fotos/casa_puerta_verde.jpg" alt="El taller de Gugui en Majadahonda" class="w-full block" style="aspect-ratio:4/5;object-fit:cover;"/></div>
-        <p class="script text-center text-[24px] mt-2" style="color:var(--soft);">el taller, en casa</p>
+  <div class="relative z-10 max-w-[1140px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <div class="rise order-2 md:order-1">
+      <div style="background:#f6efe2;padding:14px;border:1px solid rgba(63,52,40,.5);box-shadow:0 22px 50px rgba(63,52,40,.2);max-width:440px;">
+        <div style="border:1px solid rgba(63,52,40,.3);overflow:hidden;"><img src="fotos/mujer_jardin.jpg" alt="Retiro de 3 días" class="w-full block" style="aspect-ratio:4/5;object-fit:cover;"/></div>
       </div>
     </div>
-    <div class="rise text-center md:text-left order-1 md:order-2">
-      <p class="lab text-[12px] mb-1" style="color:var(--terra);">Dónde estoy</p>
-      <p class="script text-[28px] md:text-[36px] leading-none mb-2" style="color:var(--terra);"><span class="sym">❧</span>ven a verlo</p>
-      <h2 class="grain-green bodoni font-medium text-[34px] md:text-[50px] leading-[0.98] tracking-[0.01em] mb-6">MAJADAHONDA</h2>
-      <div class="space-y-6 max-w-[440px] mx-auto md:mx-0">
-        <div class="cchan"><span class="material-symbols-outlined">location_on</span><div><h4 class="bodoni text-[22px]" style="color:var(--green);">El taller</h4><p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">En mi propia casa, junto al huerto, en Majadahonda (Madrid). Las visitas son siempre con cita previa.</p></div></div>
-        <div class="cchan"><span class="material-symbols-outlined">photo_camera</span><div><h4 class="bodoni text-[22px]" style="color:var(--green);">Instagram</h4><p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">El día a día del huerto y los talleres en <a href="https://instagram.com/iphonegugui" class="glink text-[13px]" style="border-color:rgba(63,52,40,.5);">@iphonegugui <span class="arw">→</span></a></p></div></div>
-        <div class="cchan"><span class="material-symbols-outlined">schedule</span><div><h4 class="bodoni text-[22px]" style="color:var(--green);">Respuesta</h4><p class="corm text-[18px] leading-[1.5]" style="color:var(--ink);">Contesto los mensajes en un par de días. Sin prisa, pero con cariño.</p></div></div>
-      </div>
+    <div class="rise order-1 md:order-2 text-center md:text-left">
+      <p class="lab text-[12px] mb-3" style="color:var(--terra);">Qué es el retiro</p>
+      <h2 class="grain-green bodoni font-medium text-[32px] md:text-[50px] leading-[0.98] tracking-[0.01em] mb-5">TRES DÍAS PARA VOLVER A <span class="grain-terra">TI</span></h2>
+      <p class="corm text-[18px] md:text-[20px] leading-[1.6]" style="color:var(--ink);">El retiro reúne todo el universo Guguiarte: huerto, taller, arte floral y descanso. Tres días de crear sin prisa, comer despacio y estar entre mujeres que entienden tu ritmo. Se vuelve distinta.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ CÓMO LLEGAR · MAPA ============ -->
-<section class="relative overflow-hidden py-16 md:py-24" id="mapa">
-  <img src="decor/flor_azul.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;bottom:2%;width:400px;transform:scaleX(-1);"/>
+<!-- ============ QUÉ HAREMOS ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="haremos" style="background:var(--creamB,#fffaf3);">
+  <img src="decor/flor_wisteria.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;bottom:4%;height:50%;"/>
 
-
-
-
-  <div class="relative z-10 max-w-[1080px] mx-auto px-6 md:px-12">
-    <div class="text-center mb-8 md:mb-10">
-      <p class="script text-[26px] md:text-[34px] leading-none mb-1" style="color:var(--terra);"><span style="font-family:'Bodoni Moda',serif;color:var(--terra);font-size:.5em;vertical-align:.35em;margin-right:.5em;">✦</span>dónde nos encontramos</p>
-      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[64px] leading-none tracking-[0.02em]" style="color:var(--green);">CÓMO LLEGAR</h2>
-      <p class="corm text-[18px] md:text-[20px] mt-4" style="color:var(--ink);">El taller de Gugui · Travesía de Navaluenga 8, Majadahonda (Madrid)</p>
+  <div class="relative z-10 max-w-[880px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 rise">
+      <p class="script text-[26px] md:text-[34px] leading-none" style="color:var(--terra);"><span class="sym">❦</span>paso a paso</p>
+      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[64px] leading-none tracking-[0.02em]">QUÉ HAREMOS</h2>
     </div>
-    <div style="background:#f6efe2;padding:12px;border:1px solid rgba(63,52,40,.3);box-shadow:0 24px 54px rgba(63,52,40,.16);">
-      <iframe title="Mapa · Guguiarte, Majadahonda" src="https://www.google.com/maps?q=Traves%C3%ADa+de+Navaluenga+8,+28220+Majadahonda,+Madrid,+Espa%C3%B1a&output=embed" width="100%" height="430" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <ul class="flex flex-col gap-6 rise max-w-[640px] mx-auto">
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Día 1 · Aterrizar</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Llegar, respirar, conocer el huerto y las primeras manos en la tierra.</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Día 2 · Crear</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Talleres de prensado y composición, y tiempo libre para explorar.</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Día 3 · Integrar</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Cerrar con una pieza propia y llevarte la calma a casa.</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Entre medias</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Paseos, comidas lentas y conversación sin reloj.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="incluye">
+  <img src="decor/helecho_dorado.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:12%;height:48%;transform:scaleX(-1);"/>
+
+  <div class="relative z-10 max-w-[880px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 rise">
+      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[64px] leading-none tracking-[0.02em]">QUÉ INCLUYE</h2>
     </div>
-    <div class="text-center mt-6">
-      <a href="https://www.google.com/maps?q=Traves%C3%ADa+de+Navaluenga+8,+28220+Majadahonda,+Madrid,+Espa%C3%B1a" target="_blank" rel="noopener" class="glink text-[14px]">Abrir en Google Maps <span class="arw">→</span></a>
+    <ul class="grid md:grid-cols-2 gap-x-12 gap-y-6 rise">
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Talleres y materiales</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Todo el arte floral de los tres días.</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Estancia y comidas</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Alojamiento y comidas cuidadas (según formato).</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">El huerto abierto</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Acceso al huerto y sus flores.</p></div></li>
+<li class="flex gap-4"><span class="sym" style="margin:0;">❊</span><div><p class="bodoni text-[21px] md:text-[24px]" style="color:var(--green);">Grupo pequeño</p><p class="corm text-[17px] md:text-[18px] leading-[1.5]" style="color:var(--soft);">Muy pocas plazas, para cuidar a cada una.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ INVERSIÓN + CUÁNDO ============ -->
+<section class="relative overflow-hidden py-16 md:py-24" id="cuando" style="background:var(--creamB,#fffaf3);">
+  <img src="decor/flor_salvia.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:20%;height:46%;"/>
+
+  <div class="relative z-10 max-w-[1040px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+    <div class="rise text-center md:text-left">
+      <p class="script text-[26px] md:text-[34px] leading-none" style="color:var(--terra);"><span class="sym">✷</span>la inversión</p>
+      <h2 class="grain-green bodoni font-medium text-[40px] md:text-[62px] leading-none tracking-[0.02em] mb-4">Por confirmar</h2>
+      <p class="corm text-[18px] md:text-[20px] leading-[1.55]" style="color:var(--ink);">El retiro se celebra pocas veces al año, con plazas muy limitadas. El primer retiro está previsto para otoño de 2026. Escríbenos para entrar en la lista.</p>
+    </div>
+    <div class="rise">
+      <h3 class="lab text-[12px] mb-4" style="color:var(--terra);">Cuándo y dónde</h3>
+<div class="flex justify-between gap-6 py-3" style="border-bottom:1px solid rgba(63,52,40,.14);"><span class="lab text-[12px]" style="color:var(--soft);">Duración</span><span class="corm text-[19px]" style="color:var(--ink);text-align:right;">3 días</span></div>
+<div class="flex justify-between gap-6 py-3" style="border-bottom:1px solid rgba(63,52,40,.14);"><span class="lab text-[12px]" style="color:var(--soft);">Frecuencia</span><span class="corm text-[19px]" style="color:var(--ink);text-align:right;">Cada 6 meses aprox.</span></div>
+<div class="flex justify-between gap-6 py-3" style="border-bottom:1px solid rgba(63,52,40,.14);"><span class="lab text-[12px]" style="color:var(--soft);">Dónde</span><span class="corm text-[19px]" style="color:var(--ink);text-align:right;">Casa-taller y huerto · Majadahonda</span></div>
+<div class="flex justify-between gap-6 py-3" style="border-bottom:1px solid rgba(63,52,40,.14);"><span class="lab text-[12px]" style="color:var(--soft);">Cuándo</span><span class="corm text-[19px]" style="color:var(--ink);text-align:right;">Otoño 2026 (previsto)</span></div>
     </div>
   </div>
 </section>
 
 <!-- ============ NEWSLETTER ============ -->
-<section class="relative overflow-hidden py-24 md:py-32" style="background:#383c37;">
+<section class="relative overflow-hidden py-24 md:py-32" id="contacto" style="background:#383c37;">
 
 
 
@@ -199,7 +206,7 @@
   <div class="relative z-10 max-w-[640px] mx-auto px-6 text-center">
     <p class="script text-[30px] md:text-[38px] leading-none mb-1" style="color:#e3c79a;"><span style="font-family:'Bodoni Moda',serif;color:#e3c79a;font-size:.5em;vertical-align:.35em;margin-right:.5em;">✳</span>cartas,</p>
     <h2 class="grain-cream bodoni font-medium text-[38px] md:text-[62px] leading-none tracking-[0.01em] mb-6">NO NEWSLETTERS</h2>
-    <p class="corm text-[19px] md:text-[21px] leading-[1.5] mb-10" style="color:rgba(239,230,217,.9);">De vez en cuando escribo despacio: calendario de talleres, reflexiones desde el huerto y notas de botánica estacional.</p>
+    <p class="corm text-[19px] md:text-[21px] leading-[1.5] mb-10" style="color:rgba(239,230,217,.9);">De vez en cuando Gugui escribe despacio: calendario de talleres, reflexiones desde el huerto y notas de botánica estacional.</p>
     <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto items-center" onsubmit="return false;">
       <input type="email" placeholder="Tu correo electrónico" class="flex-1 w-full bg-transparent px-2 py-3 corm text-[18px] outline-none text-center sm:text-left" style="border:0;border-bottom:1px solid rgba(239,230,217,.45);color:#efe6d9;"/>
       <button class="glink text-[15px] whitespace-nowrap" style="color:#efe6d9;border-color:rgba(239,230,217,.6);">Suscribirme <span class="arw">→</span></button>

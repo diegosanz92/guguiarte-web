@@ -9,19 +9,20 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Parisienne&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
 <style>
-  :root{ --cream:#efe6d9; --green:#33413a; --ink:#3f3428; --terra:#b06a45; --soft:#6f5c46; --sage:#6e7d68; }
-  body{background:var(--cream);color:var(--ink);font-family:'Cormorant',serif;}
+  @font-face{font-family:'Angella White';src:url('fonts/angella-white.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
+  :root{ --cream:#fffbf8; --green:#33413a; --ink:#3f3428; --terra:#b06a45; --soft:#6f5c46; --sage:#6e7d68; }
+  body{background:var(--cream);color:var(--ink);font-family:'Bodoni Moda',serif;}
   .wash{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
         -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);
         mask-image:linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);}
-  .bodoni{font-family:'Cormorant',serif;}
+  .bodoni{font-family:'Bodoni Moda',serif;}
   .sans{font-family:'Jost',sans-serif;}
   .material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;}
-  .script{font-family:'Libre Caslon Text',serif;font-style:italic;font-weight:400;}
-  .corm{font-family:'Cormorant',serif;}
-  .lab{font-family:'Cormorant',serif;text-transform:uppercase;letter-spacing:.22em;}
+  .script{font-family:'Angella White','Parisienne',cursive;font-weight:400;}
+  .corm{font-family:'Bodoni Moda',serif;}
+  .lab{font-family:'Bodoni Moda',serif;text-transform:uppercase;letter-spacing:.22em;}
   .rise{opacity:0;transform:translateY(20px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);}
   .rise.in{opacity:1;transform:none;}
   .petalo{position:absolute;pointer-events:none;user-select:none;z-index:1;mix-blend-mode:multiply;}
@@ -31,8 +32,8 @@
     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
   .grain-green{background-color:#33413a;filter:drop-shadow(0 1px 0 rgba(255,255,255,.3));}
   .grain-terra{background-color:#b06a45;filter:drop-shadow(0 1px 0 rgba(255,255,255,.3));}
-  .grain-cream{background-color:#efe6d9;filter:drop-shadow(0 1px 0 rgba(0,0,0,.28));}
-  .glink{display:inline-flex;align-items:center;gap:.7rem;font-family:'Cormorant',serif;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--ink);border-bottom:1px solid rgba(63,52,40,.55);padding-bottom:4px;}
+  .grain-cream{background-color:#fffbf8;filter:drop-shadow(0 1px 0 rgba(0,0,0,.28));}
+  .glink{display:inline-flex;align-items:center;gap:.7rem;font-family:'Bodoni Moda',serif;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--ink);border-bottom:1px solid rgba(63,52,40,.55);padding-bottom:4px;}
   .glink .arw{display:inline-block;transition:transform .3s;}
   .glink:hover .arw{transform:translateX(5px);}
   .card-img{aspect-ratio:4/5;object-fit:cover;width:100%;display:block;transition:transform 1.4s cubic-bezier(.2,.7,.2,1);}
@@ -56,21 +57,21 @@
   /* ===== CUERPO DEL ARTÍCULO (estilo editorial) =====
      Estas clases aplican a lo que el editor de WordPress genera dentro de .prose */
   .prose{color:var(--ink);}
-  .prose p{font-family:'Cormorant',serif;font-size:21px;line-height:1.72;margin:0 0 1.5rem;}
+  .prose p{font-family:'Bodoni Moda',serif;font-size:21px;line-height:1.72;margin:0 0 1.5rem;}
   .prose p:first-of-type::first-letter{
-     font-family:'Cormorant',serif;float:left;font-size:78px;line-height:.72;
+     font-family:'Bodoni Moda',serif;float:left;font-size:78px;line-height:.72;
      padding:6px 14px 0 0;color:var(--terra);font-weight:600;}
-  .prose h2{font-family:'Cormorant',serif;font-weight:600;font-size:34px;line-height:1.1;color:var(--green);margin:2.6rem 0 1rem;}
-  .prose h3{font-family:'Cormorant',serif;font-weight:600;font-size:26px;line-height:1.15;color:var(--green);margin:2rem 0 .8rem;}
+  .prose h2{font-family:'Bodoni Moda',serif;font-weight:600;font-size:34px;line-height:1.1;color:var(--green);margin:2.6rem 0 1rem;}
+  .prose h3{font-family:'Bodoni Moda',serif;font-weight:600;font-size:26px;line-height:1.15;color:var(--green);margin:2rem 0 .8rem;}
   .prose a{color:var(--terra);border-bottom:1px solid rgba(176,106,69,.5);}
   .prose ul{margin:0 0 1.5rem;padding:0;list-style:none;}
-  .prose ul li{font-family:'Cormorant',serif;font-size:21px;line-height:1.6;padding-left:1.6rem;position:relative;margin-bottom:.6rem;}
+  .prose ul li{font-family:'Bodoni Moda',serif;font-size:21px;line-height:1.6;padding-left:1.6rem;position:relative;margin-bottom:.6rem;}
   .prose ul li::before{content:"❊";position:absolute;left:0;color:var(--terra);font-size:15px;top:4px;}
   .prose em{font-style:italic;}
   .prose blockquote{margin:2.4rem 0;text-align:center;}
   .prose img{width:100%;display:block;margin:2.4rem 0;}
   .prose figcaption{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10px;color:var(--soft);text-align:center;margin-top:-1.6rem;margin-bottom:2.4rem;}
-  .pullquote{font-family:'Libre Caslon Text',serif;font-style:italic;font-size:30px;line-height:1.3;color:var(--green);max-width:600px;margin:0 auto;}
+  .pullquote{font-family:'Bodoni Moda',serif;font-style:italic;font-size:30px;line-height:1.3;color:var(--green);max-width:600px;margin:0 auto;}
   /* caja "En resumen" — pensada para extracción por IA / respuestas destacadas */
   .tldr{background:#fff;border:1px solid rgba(63,52,40,.14);border-left:3px solid var(--terra);padding:22px 26px;margin:0 0 2.4rem;}
   .tldr h2{font-family:'Jost',sans-serif !important;text-transform:uppercase;letter-spacing:.2em;font-size:11px !important;color:var(--terra) !important;margin:0 0 12px !important;}
@@ -78,11 +79,11 @@
   .tldr ul li{font-size:18px !important;margin-bottom:.5rem !important;line-height:1.5 !important;}
   /* FAQ */
   .faq details{border-bottom:1px solid rgba(63,52,40,.14);padding:6px 0;}
-  .faq summary{font-family:'Cormorant',serif;font-weight:600;font-size:23px;color:var(--green);cursor:pointer;list-style:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .faq summary{font-family:'Bodoni Moda',serif;font-weight:600;font-size:23px;color:var(--green);cursor:pointer;list-style:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;}
   .faq summary::-webkit-details-marker{display:none;}
   .faq summary::after{content:"+";font-family:'Jost',sans-serif;font-size:24px;color:var(--terra);transition:transform .3s;}
   .faq details[open] summary::after{content:"–";}
-  .faq .ans{font-family:'Cormorant',serif;font-size:19px;line-height:1.6;color:var(--ink);padding:0 0 18px;max-width:640px;}
+  .faq .ans{font-family:'Bodoni Moda',serif;font-size:19px;line-height:1.6;color:var(--ink);padding:0 0 18px;max-width:640px;}
 
   /* ===== BARRA LATERAL ===== */
   .side-box{background:#fff;border:1px solid rgba(63,52,40,.12);padding:24px;}
@@ -91,16 +92,20 @@
   .mini-art:last-child{border-bottom:0;padding-bottom:0;}
   .mini-art:first-child{padding-top:0;}
   .mini-art img{width:66px;height:66px;object-fit:cover;flex-shrink:0;}
-  .mini-art .t{font-family:'Cormorant',serif;font-weight:500;font-size:19px;line-height:1.15;color:var(--green);}
+  .mini-art .t{font-family:'Bodoni Moda',serif;font-weight:500;font-size:19px;line-height:1.15;color:var(--green);}
   .mini-art:hover .t{color:var(--terra);}
   .mini-art .d{font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:9px;color:var(--soft);margin-top:5px;}
-  .side-link{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid rgba(63,52,40,.1);font-family:'Cormorant',serif;font-size:20px;color:var(--ink);transition:color .25s;}
+  .side-link{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid rgba(63,52,40,.1);font-family:'Bodoni Moda',serif;font-size:20px;color:var(--ink);transition:color .25s;}
   .side-link:last-child{border-bottom:0;}
   .side-link:hover{color:var(--terra);}
   .side-link .material-symbols-outlined{font-size:18px;opacity:.5;transition:transform .3s;}
   .side-link:hover .material-symbols-outlined{transform:translateX(4px);opacity:1;}
   .topic-chip{display:inline-block;font-family:'Jost',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:10px;border:1px solid rgba(63,52,40,.28);padding:7px 13px;border-radius:999px;color:var(--soft);margin:0 6px 8px 0;transition:all .3s;}
   .topic-chip:hover{background:var(--green);color:#efe6d9;border-color:var(--green);}
+  .wash{display:none!important;}
+  /* titulos pequenos/medianos mas gruesos (Bodoni es fino en pequeno) */
+  h2.bodoni,h2.disp{font-weight:600!important;}
+  h3.bodoni,h3.disp,.thcard h3,article h3{font-weight:700!important;}
 </style>
 </head>
 <body class="antialiased">
@@ -115,7 +120,7 @@
       <span aria-hidden="true" style="width:1px;height:11px;background:currentColor;opacity:.45;display:inline-block;"></span>
       <a class="hover:opacity-70" href="diario.html">Blog</a>
     </div>
-    <a href="home_guguiarte_mix.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full" loading="lazy" decoding="async"/></a>
+    <a href="home_editorial_26.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full" loading="lazy" decoding="async"/></a>
     <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
       <a class="material-symbols-outlined text-[21px]" href="#" title="Buscar">search</a>
       <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
@@ -149,12 +154,17 @@
      WP: categoría (the_category) · título (the_title) · autor (the_author) · fecha (the_date) -->
 <article>
 <section class="relative overflow-hidden pt-14 md:pt-20 pb-8">
+  <img src="decor/helecho_dorado.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;bottom:24%;height:42%;"/>
+
+
+
+
   <img src="decor/aqua_cream.jpg" alt="" class="wash" loading="lazy" decoding="async"/>
   <img src="decor/flor_peonia.png" alt="" class="petalo hidden md:block" style="left:-3%;top:20%;height:20%;opacity:.15;" loading="lazy" decoding="async"/>
   <div class="relative z-10 max-w-[760px] mx-auto px-6 text-center">
     <!-- migas -->
     <nav aria-label="Migas de pan" class="sans text-[11px] uppercase tracking-[0.2em] mb-7" style="color:var(--soft);">
-      <a href="home_guguiarte_mix.html" class="hover:opacity-70">Inicio</a>
+      <a href="home_editorial_26.html" class="hover:opacity-70">Inicio</a>
       <span class="mx-2">·</span>
       <a href="diario.html" class="hover:opacity-70">Blog</a>
       <span class="mx-2">·</span>
@@ -173,6 +183,11 @@
 
 <!-- ============ IMAGEN DESTACADA ============ WP: the_post_thumbnail -->
 <section class="relative z-10 max-w-[1040px] mx-auto px-6 md:px-0 mb-14 md:mb-20">
+  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:38%;height:54%;transform:scaleX(-1);"/>
+
+
+
+
   <figure class="rise">
     <img src="fotos/manos_cosecha.jpg" alt="Manos recogiendo dalias en el huerto floral de Guguiarte al amanecer" width="1040" height="585" fetchpriority="high" decoding="async" class="w-full block" style="aspect-ratio:16/9;object-fit:cover;"/>
     <figcaption class="sans uppercase tracking-[0.16em] text-[10px] mt-3 text-center" style="color:var(--soft);">El huerto de Guguiarte al amanecer · Majadahonda</figcaption>
@@ -181,7 +196,12 @@
 
 <!-- ============ CUERPO + BARRA LATERAL ============ -->
 <section class="relative overflow-hidden pb-8">
-  <img src="decor/flor_anemona.png" alt="" class="petalo hidden lg:block" style="right:0%;top:4%;height:12%;opacity:.09;" loading="lazy" decoding="async"/>
+  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:40%;height:40%;"/>
+
+
+
+
+  <img src="decor/flor_clavel.png" alt="" class="petalo hidden lg:block" style="right:0%;top:4%;height:12%;opacity:.09;" loading="lazy" decoding="async"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12 grid lg:grid-cols-[1fr_310px] gap-12 xl:gap-16">
 
     <!-- ---------- COLUMNA PRINCIPAL ---------- WP: the_content() dentro de .prose -->
@@ -312,6 +332,11 @@
 
 <!-- ============ PREGUNTAS FRECUENTES ============ (coincide con el FAQPage JSON-LD · extracción por IA) -->
 <section class="relative overflow-hidden py-14 md:py-20" style="background:rgba(255,255,255,.4);border-top:1px solid rgba(63,52,40,.1);">
+  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;bottom:22%;height:54%;transform:scaleX(-1);"/>
+
+
+
+
   <div class="relative z-10 max-w-[760px] mx-auto px-6">
     <div class="text-center mb-8">
       <p class="script text-[26px] leading-none mb-1" style="color:var(--terra);">te lo cuento</p>
@@ -336,10 +361,15 @@
 
 <!-- ============ ARTÍCULOS DE INTERÉS ============ WP: WP_Query relacionados por categoría, excl. actual -->
 <section class="relative overflow-hidden py-16 md:py-24" style="border-top:1px solid rgba(63,52,40,.12);">
+  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:2%;height:56%;"/>
+
+
+
+
   <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;top:14%;height:18%;opacity:.12;" loading="lazy" decoding="async"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
     <div class="text-center mb-12 md:mb-16">
-      <p class="script text-[28px] md:text-[34px] leading-none mb-1" style="color:var(--terra);"><span style="font-family:'Cormorant',serif;color:var(--terra);font-size:.5em;vertical-align:.35em;margin-right:.5em;">✦</span>quizá también</p>
+      <p class="script text-[28px] md:text-[34px] leading-none mb-1" style="color:var(--terra);"><span style="font-family:'Bodoni Moda',serif;color:var(--terra);font-size:.5em;vertical-align:.35em;margin-right:.5em;">✦</span>quizá también</p>
       <h2 class="grain-green bodoni font-medium text-[38px] md:text-[56px] leading-none tracking-[0.01em]" style="color:var(--green);">ARTÍCULOS DE <span class="grain-terra">INTERÉS</span></h2>
     </div>
 
@@ -379,11 +409,14 @@
 
 <!-- ============ NEWSLETTER (común) ============ -->
 <section class="relative overflow-hidden py-24 md:py-32" id="contacto-news" style="background:#383c37;">
+
+
+
   <img src="decor/bg_floral_oscuro.jpg" alt="" class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="opacity:.20;mix-blend-mode:overlay;" loading="lazy" decoding="async"/>
   <img src="decor/IMG_0091.png" alt="" class="petalo hidden md:block" style="left:-4%;bottom:0;height:80%;opacity:.10;filter:invert(1);mix-blend-mode:screen;" loading="lazy" decoding="async"/>
   <img src="decor/IMG_0089.png" alt="" class="petalo hidden md:block" style="right:-4%;top:0;height:80%;opacity:.10;filter:invert(1);mix-blend-mode:screen;" loading="lazy" decoding="async"/>
   <div class="relative z-10 max-w-[640px] mx-auto px-6 text-center">
-    <p class="script text-[30px] md:text-[38px] leading-none mb-1" style="color:#e3c79a;"><span style="font-family:'Cormorant',serif;color:#e3c79a;font-size:.5em;vertical-align:.35em;margin-right:.5em;">✳</span>cartas,</p>
+    <p class="script text-[30px] md:text-[38px] leading-none mb-1" style="color:#e3c79a;"><span style="font-family:'Bodoni Moda',serif;color:#e3c79a;font-size:.5em;vertical-align:.35em;margin-right:.5em;">✳</span>cartas,</p>
     <h2 class="grain-cream bodoni font-medium text-[38px] md:text-[62px] leading-none tracking-[0.01em] mb-6">NO NEWSLETTERS</h2>
     <p class="corm text-[19px] md:text-[21px] leading-[1.5] mb-10" style="color:rgba(239,230,217,.9);">Si quieres recibir el Blog en tu correo, te escribo de vez en cuando: calendario de talleres, reflexiones desde el huerto y notas de botánica estacional.</p>
     <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto items-center" onsubmit="return false;">
