@@ -60,10 +60,11 @@
 <body class="antialiased">
 
 <!-- ============ HEADER · MENÚ ============ -->
-<header class="w-full border-b bg-white sans relative overflow-hidden" style="border-color:rgba(63,52,40,.14);">
+<header class="w-full border-b bg-white sans relative z-50 overflow-hidden" style="border-color:rgba(63,52,40,.14);">
   <img src="menu_flores.png" alt="" class="absolute top-0 left-0 w-full h-auto pointer-events-none select-none" style="opacity:.13;mix-blend-mode:multiply;z-index:0;-webkit-mask-image:linear-gradient(to right, #000 0%, #000 11%, rgba(0,0,0,.35) 20%, transparent 38%, transparent 60%, #000 78%, #000 100%);mask-image:linear-gradient(to right, #000 0%, #000 11%, rgba(0,0,0,.35) 20%, transparent 38%, transparent 60%, #000 78%, #000 100%);"/>
   <img src="decor/IMG_0036.png" alt="" class="hidden md:block absolute inset-y-0 my-auto left-[17%] lg:left-[20%] h-[175%] w-auto pointer-events-none select-none" style="opacity:.15;mix-blend-mode:multiply;z-index:0;"/>
   <div class="relative z-10 flex items-center justify-center px-5 md:px-14 py-1.5 max-w-[1320px] mx-auto">
+    <a class="material-symbols-outlined text-[22px] md:hidden absolute left-5 top-1/2 -translate-y-1/2" href="tienda.html" title="Carrito" style="color:var(--soft);z-index:20;">shopping_bag</a>
     <div class="hidden md:flex items-center gap-4 absolute left-5 md:left-14 top-1/2 -translate-y-1/2 sans text-[11px] uppercase tracking-[0.2em]" style="color:var(--soft);">
       <a class="hover:opacity-70" href="#">Mi cuenta</a>
       <span aria-hidden="true" style="width:1px;height:11px;background:currentColor;opacity:.45;display:inline-block;"></span>
@@ -72,7 +73,7 @@
     <a href="index.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full"/></a>
     <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
       <a class="material-symbols-outlined text-[21px] hidden md:inline-block" href="#" title="Buscar">search</a>
-      <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
+      <a class="material-symbols-outlined text-[21px] hidden md:inline-block" href="tienda.html" title="Carrito">shopping_bag</a>
       <button type="button" class="material-symbols-outlined text-[23px] md:hidden" style="background:none;border:0;cursor:pointer;color:inherit;padding:0;" onclick="document.getElementById('mobmenu').classList.toggle('hidden')">menu</button>
     </div>
   </div>
