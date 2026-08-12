@@ -10,6 +10,7 @@
 <!-- Bodoni Moda = equivalente web de Bodoni FLF · Parisienne = equivalente del manuscrito (Angella White) -->
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Parisienne&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
 <style>
+  html,body{overflow-x:hidden;max-width:100%;}
   /* Angella White (subtítulos manuscritos) — NOTA: archivo "Personal Use Only".
      Para publicar la web hace falta la licencia comercial o una alternativa libre. */
   @font-face{
@@ -124,27 +125,37 @@
   </div>
 </section>
 
-<!-- ===================== VOLVER A TI (libélula + hoja + foto ancha) ===================== -->
-<section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="sobre-corto">
-  <!-- adornos a tinta y hoja estampada -->
-  <img src="decor/libelula.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="left:2%;top:6%;width:200px;z-index:2;"/>
-  <img src="decor/mariposa.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="left:3%;bottom:16%;width:118px;z-index:2;opacity:.9;"/>
-  <img src="decor/IMG_0097.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="right:-2%;top:-4%;height:76%;opacity:.5;z-index:1;mix-blend-mode:multiply;"/>
-  <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
-    <!-- título centrado -->
-    <div class="text-center rise">
-      <p class="script text-[34px] md:text-[48px] text-[var(--terra)] mb-1">un refugio para</p>
-      <h2 class="disp text-[52px] md:text-[88px] text-[var(--green)] tracking-[.03em]">VOLVER A TI</h2>
+<!-- ===================== HAY UN LUGAR · Mujeres Jardín (enmarcado en flores secas) ===================== -->
+<section class="relative overflow-hidden bg-[var(--creamB)] pt-16 pb-20 md:pt-24 md:pb-28" id="sobre-corto">
+  <!-- flores secas enmarcando el texto (como el diseño de Gugui) -->
+  <img src="decor/flor_wisteria.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:0;top:0;height:42%;z-index:1;"/>
+  <img src="decor/IMG_0089.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:13%;top:0;height:22%;opacity:.7;z-index:1;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_wisteria.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;top:0;height:50%;transform:scaleX(-1);z-index:1;"/>
+  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;bottom:0;height:28%;z-index:1;"/>
+  <img src="decor/flor_peonia.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:0;bottom:0;height:28%;z-index:1;"/>
+  <!-- móvil: un toque floral discreto -->
+  <img src="decor/flor_wisteria.png" alt="" class="md:hidden absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;top:0;height:20%;z-index:1;opacity:.9;"/>
+  <img src="decor/flor_amapola_blanca.png" alt="" class="md:hidden absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:0;top:0;height:15%;z-index:1;opacity:.9;"/>
+
+  <div class="relative z-10 max-w-[820px] mx-auto px-6 text-center">
+    <div class="rise leading-[.86]">
+      <span class="script block text-[54px] md:text-[96px] text-[var(--green)]">Hay un lugar</span>
+      <span class="disp block text-[46px] md:text-[82px] text-[var(--green)] tracking-[.02em] -mt-3 md:-mt-5">DONDE</span>
+      <span class="disp block text-[26px] md:text-[42px] text-[var(--green)] tracking-[.01em] mt-2">Las Mujeres Jardín <span class="text-[var(--terra)]">se reconocen</span></span>
     </div>
-    <!-- texto a la izquierda -->
-    <div class="rise mt-8 md:mt-10 md:pl-[11%] max-w-[700px]">
-      <p class="body text-[18px] md:text-[20px] text-[var(--ink)]">
-        Un taller de arte floral y vida creativa consciente en Majadahonda. Un espacio donde la naturaleza y el arte te devuelven a ti — para crear sin prisa ni juicio, con el huerto como origen y las manos como herramienta.
+    <div class="rise mt-9 md:mt-11 max-w-[680px] mx-auto">
+      <p class="script text-[26px] md:text-[32px] text-[var(--terra)] mb-4">Somos muchas…</p>
+      <p class="body text-[17px] md:text-[20px] text-[var(--ink)] leading-[1.7]">
+        Las que llevamos años guardando flores entre las páginas de los libros. Las que seguimos agachándonos a recoger una hoja seca. Las que sentimos la inspiración y la escribimos en una servilleta de papel. Las que nunca dejamos de mirar el mundo con ojos de niña.
       </p>
-      <a href="sobre-gugui.html" class="glink mt-6">Sobre Guguiarte <span class="arw">→</span></a>
+      <p class="body text-[17px] md:text-[20px] text-[var(--ink)] leading-[1.7] mt-5">
+        Llevo mucho tiempo imaginando un lugar donde encontrarnos y reconocernos las unas a las otras, tal y como somos. Un lugar donde cultivamos flores, pero también los sueños que un día dejamos olvidados entre las páginas de los cuentos.
+      </p>
+      <p class="body text-[21px] md:text-[25px] text-[var(--green)] mt-7" style="font-weight:600;">Bienvenida, Mujer Jardín.</p>
+      <p class="body italic text-[17px] md:text-[20px] text-[var(--soft)] mt-1">Aquí el aprendizaje no se construye con técnicas.</p>
+      <a href="sobre-gugui.html" class="glink mt-7">Sobre Guguiarte <span class="arw">→</span></a>
     </div>
-    <!-- foto ancha del jardín -->
-    <div class="rise mt-10 md:mt-12 md:pl-[11%] md:pr-[16%]">
+    <div class="rise mt-12 md:mt-16 max-w-[1000px] mx-auto">
       <div class="gridphoto"><img src="fotos/jardin_silvestre.jpg" alt="El huerto floral de Guguiarte" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;"/></div>
     </div>
   </div>
@@ -155,13 +166,13 @@
   <!-- estampado botánico de Gugui arriba + flor prensada azul abajo a la izquierda -->
   <img src="decor/estampa_1.png" alt="" class="sprig hidden md:block" style="left:50%;top:-10%;transform:translateX(-50%);height:50%;opacity:.42;"/>
   <img src="decor/estampa_4.png" alt="" class="sprig hidden md:block" style="right:1%;top:0;height:42%;opacity:.3;"/>
-  <img src="decor/flor_azul.png" alt="" class="bloom hidden md:block" style="left:-4%;bottom:-3%;height:42%;z-index:14;"/>
+  <img src="decor/flor_amarilla.png" alt="" class="bloom hidden md:block" style="left:0;bottom:0;height:42%;z-index:14;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
-      <p class="script text-[32px] md:text-[42px] text-[var(--terra)] mb-1">en el</p>
-      <h2 class="disp text-[46px] md:text-[80px] text-[var(--green)] tracking-[.02em]">TODO NACE EN EL HUERTO</h2>
-      <p class="body text-[18px] md:text-[20px] text-[var(--soft)] max-w-[600px] mx-auto mt-6">
-        Un huerto floral ecológico, cultivado al ritmo de las estaciones. Sembramos, recolectamos y secamos lo que crece — la fuente de todo lo que creamos.
+      <p class="script text-[32px] md:text-[42px] text-[var(--terra)] mb-1">todo nace</p>
+      <h2 class="disp text-[46px] md:text-[80px] text-[var(--green)] tracking-[.02em]">EN EL HUERTO</h2>
+      <p class="body text-[18px] md:text-[20px] text-[var(--soft)] max-w-[660px] mx-auto mt-6">
+        Un día soñé con un pequeño huerto floral. Un lugar donde sembrar, cultivar, cuidar, crear y compartir; donde aprender de la naturaleza y recordar que, igual que ella, nosotras también vivimos por ciclos. Un lugar donde las Mujeres Jardín volvemos a florecer.
       </p>
     </div>
     <!-- cuadrícula tipo mosaico -->
@@ -180,7 +191,7 @@
 <!-- ===================== TALLERES (rejilla de cards) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="talleres">
   <img src="decor/estampa_2.png" alt="" class="sprig hidden md:block" style="left:-2%;top:0;height:70%;opacity:.5;"/>
-  <img src="decor/flor_amarilla.png" alt="" class="bloom hidden md:block" style="right:-1%;top:3%;height:26%;z-index:14;transform:scaleX(-1);"/>
+  <img src="decor/flor_azul.png" alt="" class="bloom hidden md:block" style="right:0;top:3%;height:26%;z-index:14;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
       <p class="script text-[32px] md:text-[42px] text-[var(--terra)] mb-1">los</p>
@@ -210,10 +221,42 @@
   </div>
 </section>
 
+<!-- ===================== CICLOS CREATIVOS ===================== -->
+<section class="relative overflow-hidden bg-[var(--creamA)] py-20 md:py-28" id="ciclos">
+  <!-- flores secas enmarcando (como el diseño de Gugui) -->
+  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:0;top:0;height:38%;z-index:1;"/>
+  <img src="decor/IMG_0089.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;left:12%;top:0;height:20%;opacity:.7;z-index:1;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_wisteria.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;top:0;height:54%;transform:scaleX(-1);z-index:1;"/>
+  <img src="decor/flor_peonia.png" alt="" class="hidden md:block absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;bottom:0;height:26%;z-index:1;"/>
+  <img src="decor/flor_wisteria.png" alt="" class="md:hidden absolute pointer-events-none select-none" style="position:absolute;pointer-events:none;user-select:none;right:0;top:0;height:18%;z-index:1;opacity:.9;"/>
+  <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12 text-center">
+    <div class="rise mb-9">
+      <h2 class="disp text-[44px] md:text-[84px] text-[var(--green)] tracking-[.02em] leading-[1.0]">CICLOS CREATIVOS</h2>
+      <p class="script text-[28px] md:text-[40px] text-[var(--terra)] mt-1">Todo está en movimiento, nosotras también</p>
+    </div>
+    <div class="rise max-w-[760px] mx-auto">
+      <p class="body text-[18px] md:text-[21px] text-[var(--ink)] leading-[1.7]">
+        Al igual que la naturaleza sigue sus propios ciclos, nosotras también nos dejamos llevar por nuestros ciclos creativos.
+      </p>
+      <p class="body text-[18px] md:text-[21px] text-[var(--ink)] leading-[1.7] mt-4">
+        Por eso aquí los talleres no son cursos cerrados: son <strong>ciclos creativos que evolucionan con nosotras</strong>, del mismo modo que todo lo que sembramos en el huerto evoluciona con las estaciones.
+      </p>
+    </div>
+    <div class="rise grid grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 items-end justify-items-center max-w-[880px] mx-auto mt-12 mb-10">
+      <img src="decor/estampa_1.png" alt="Ciclo de Flores Prensadas" style="height:84px;object-fit:contain;mix-blend-mode:multiply;"/>
+      <img src="decor/mariposa.png" alt="Ciclo de Arte Floral" style="height:66px;object-fit:contain;mix-blend-mode:multiply;"/>
+      <img src="decor/estampa_2.png" alt="Ciclo de Escultura" style="height:92px;object-fit:contain;mix-blend-mode:multiply;"/>
+      <img src="decor/estampa_4.png" alt="Ciclo de Pintura" style="height:82px;object-fit:contain;mix-blend-mode:multiply;"/>
+      <img src="decor/libelula.png" alt="Laboratorios Creativos" style="height:60px;object-fit:contain;mix-blend-mode:multiply;"/>
+    </div>
+    <div class="rise"><a href="talleres.html#ciclos" class="glink">Descubrir los ciclos <span class="arw">→</span></a></div>
+  </div>
+</section>
+
 <!-- ===================== PRÓXIMAS EXPERIENCIAS (cuadrícula láminas) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamA)] py-20 md:py-28" id="experiencias">
   <img src="decor/estampa_3.png" alt="" class="sprig hidden md:block" style="left:1%;top:4%;height:40%;opacity:.42;"/>
-  <img src="decor/helecho_dorado.png" alt="" class="bloom hidden md:block" style="right:-2%;bottom:2%;height:26%;transform:scaleX(-1);opacity:.92;"/>
+  <img src="decor/flor_wisteria.png" alt="" class="bloom hidden md:block" style="right:0;bottom:2%;height:26%;transform:scaleX(-1);opacity:.92;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <span class="script hidden md:block absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 text-[20px] text-[var(--terra)]" style="writing-mode:vertical-rl;opacity:.75;">pocas veces al año</span>
   <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
@@ -266,7 +309,7 @@
 
 <!-- ===================== LA DESPENSA CREATIVA / EN CASA (rejilla tienda) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="tienda">
-  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:36%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));"/>
+  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:36%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <img src="decor/IMG_0097.png" alt="" class="sprig hidden md:block" style="left:-5%;bottom:0;height:56%;opacity:.12;"/>
   <img src="decor/IMG_0091.png" alt="" class="sprig hidden md:block" style="right:-5%;top:0;height:56%;opacity:.11;"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
@@ -302,7 +345,7 @@
 
 <!-- ===================== SOBRE GUGUI ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamA)] py-20 md:py-28" id="sobre">
-  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));"/>
+  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <img src="decor/flor_peonia.png" alt="" class="sprig hidden md:block" style="right:-2%;top:12%;height:22%;opacity:.13;"/>
   <div class="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
     <div class="rise order-2 md:order-1 text-center md:text-left">
@@ -326,8 +369,8 @@
 
 <!-- ===================== TESTIMONIOS ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="testimonios">
-  <img src="decor/flor_salvia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));"/>
-  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block" style="position:absolute;right:0%;top:4%;height:26%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));"/>
+  <img src="decor/flor_salvia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block" style="position:absolute;right:0%;top:4%;height:26%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1040px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
       <p class="script text-[30px] md:text-[40px] text-[var(--terra)]">en sus palabras</p>
