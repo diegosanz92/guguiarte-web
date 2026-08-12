@@ -10,6 +10,7 @@
 <!-- Bodoni Moda = equivalente web de Bodoni FLF · Parisienne = equivalente del manuscrito (Angella White) -->
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Parisienne&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
 <style>
+  @media(max-width:767px){img.florx{display:block!important;width:88px!important;height:auto!important;max-height:none!important;min-height:0!important;opacity:.95;z-index:2!important;}}
   html,body{overflow-x:hidden;max-width:100%;}
   /* Angella White (subtítulos manuscritos) — NOTA: archivo "Personal Use Only".
      Para publicar la web hace falta la licencia comercial o una alternativa libre. */
@@ -77,7 +78,7 @@
     </div>
     <a href="#inicio"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full"/></a>
     <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
-      <a class="material-symbols-outlined text-[21px]" href="#" title="Buscar">search</a>
+      <a class="material-symbols-outlined text-[21px] hidden md:inline-block" href="#" title="Buscar">search</a>
       <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
       <button type="button" class="material-symbols-outlined text-[23px] md:hidden" style="background:none;border:0;cursor:pointer;color:inherit;padding:0;" onclick="document.getElementById('mobmenu').classList.toggle('hidden')">menu</button>
     </div>
@@ -166,7 +167,7 @@
   <!-- estampado botánico de Gugui arriba + flor prensada azul abajo a la izquierda -->
   <img src="decor/estampa_1.png" alt="" class="sprig hidden md:block" style="left:50%;top:-10%;transform:translateX(-50%);height:50%;opacity:.42;"/>
   <img src="decor/estampa_4.png" alt="" class="sprig hidden md:block" style="right:1%;top:0;height:42%;opacity:.3;"/>
-  <img src="decor/flor_amarilla.png" alt="" class="bloom hidden md:block" style="left:0;bottom:0;height:42%;z-index:14;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_amarilla.png" alt="" class="bloom hidden md:block florx" style="left:0;bottom:0;height:42%;z-index:14;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
       <p class="script text-[32px] md:text-[42px] text-[var(--terra)] mb-1">todo nace</p>
@@ -191,7 +192,7 @@
 <!-- ===================== TALLERES (rejilla de cards) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="talleres">
   <img src="decor/estampa_2.png" alt="" class="sprig hidden md:block" style="left:-2%;top:0;height:70%;opacity:.5;"/>
-  <img src="decor/flor_azul.png" alt="" class="bloom hidden md:block" style="right:0;top:3%;height:26%;z-index:14;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_azul.png" alt="" class="bloom hidden md:block florx" style="right:0;top:3%;height:26%;z-index:14;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
       <p class="script text-[32px] md:text-[42px] text-[var(--terra)] mb-1">los</p>
@@ -256,7 +257,7 @@
 <!-- ===================== PRÓXIMAS EXPERIENCIAS (cuadrícula láminas) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamA)] py-20 md:py-28" id="experiencias">
   <img src="decor/estampa_3.png" alt="" class="sprig hidden md:block" style="left:1%;top:4%;height:40%;opacity:.42;"/>
-  <img src="decor/flor_wisteria.png" alt="" class="bloom hidden md:block" style="right:0;bottom:2%;height:26%;transform:scaleX(-1);opacity:.92;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_wisteria.png" alt="" class="bloom hidden md:block florx" style="right:0;bottom:2%;height:26%;transform:scaleX(-1);opacity:.92;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <span class="script hidden md:block absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 text-[20px] text-[var(--terra)]" style="writing-mode:vertical-rl;opacity:.75;">pocas veces al año</span>
   <div class="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
@@ -309,7 +310,7 @@
 
 <!-- ===================== LA DESPENSA CREATIVA / EN CASA (rejilla tienda) ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="tienda">
-  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:36%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block florx" style="position:absolute;left:0%;bottom:0%;height:36%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <img src="decor/IMG_0097.png" alt="" class="sprig hidden md:block" style="left:-5%;bottom:0;height:56%;opacity:.12;"/>
   <img src="decor/IMG_0091.png" alt="" class="sprig hidden md:block" style="right:-5%;top:0;height:56%;opacity:.11;"/>
   <div class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12">
@@ -345,7 +346,7 @@
 
 <!-- ===================== SOBRE GUGUI ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamA)] py-20 md:py-28" id="sobre">
-  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_clavel.png" alt="" class="hidden md:block florx" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <img src="decor/flor_peonia.png" alt="" class="sprig hidden md:block" style="right:-2%;top:12%;height:22%;opacity:.13;"/>
   <div class="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
     <div class="rise order-2 md:order-1 text-center md:text-left">
@@ -369,8 +370,8 @@
 
 <!-- ===================== TESTIMONIOS ===================== -->
 <section class="relative overflow-hidden bg-[var(--creamB)] py-20 md:py-28" id="testimonios">
-  <img src="decor/flor_salvia.png" alt="" class="hidden md:block" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
-  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block" style="position:absolute;right:0%;top:4%;height:26%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_salvia.png" alt="" class="hidden md:block florx" style="position:absolute;left:0%;bottom:0%;height:34%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block florx" style="position:absolute;right:0%;top:4%;height:26%;z-index:2;pointer-events:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));-webkit-mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <div class="relative z-10 max-w-[1040px] mx-auto px-6 md:px-12">
     <div class="text-center mb-14 rise">
       <p class="script text-[30px] md:text-[40px] text-[var(--terra)]">en sus palabras</p>

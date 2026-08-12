@@ -9,6 +9,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Parisienne&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
 <style>
+  @media(max-width:767px){img.florx{display:block!important;width:88px!important;height:auto!important;max-height:none!important;min-height:0!important;opacity:.95;z-index:2!important;}}
   html,body{overflow-x:hidden;max-width:100%;}
   @font-face{font-family:'Angella White';src:url('fonts/angella-white.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
   :root{ --cream:#fffbf8; --green:#33413a; --ink:#3f3428; --terra:#b06a45; --soft:#6f5c46; --sage:#6e7d68; }
@@ -76,7 +77,7 @@
     </div>
     <a href="index.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full" loading="lazy" decoding="async"/></a>
     <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
-      <a class="material-symbols-outlined text-[21px]" href="#" title="Buscar">search</a>
+      <a class="material-symbols-outlined text-[21px] hidden md:inline-block" href="#" title="Buscar">search</a>
       <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
       <button type="button" class="material-symbols-outlined text-[23px] md:hidden" style="background:none;border:0;cursor:pointer;color:inherit;padding:0;" onclick="document.getElementById('mobmenu').classList.toggle('hidden')">menu</button>
     </div>
@@ -106,9 +107,9 @@
 
 <!-- ============ HERO · DIARIO ============ -->
 <section class="relative overflow-hidden py-20 md:py-28" id="inicio">
-  <img src="decor/flor_d14.png" alt="" class="hidden md:block" data-flores-new style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;top:6%;height:56%;max-height:520px;min-height:300px;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_d14.png" alt="" class="hidden md:block florx" data-flores-new style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;top:6%;height:56%;max-height:520px;min-height:300px;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 0% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
   <img src="decor/libelula.png" alt="" class="hidden md:block" style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:1%;top:6%;width:220px;opacity:.85;"/>
-  <img src="decor/flor_d15.png" alt="" class="hidden md:block" style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;bottom:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_d15.png" alt="" class="hidden md:block florx" style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;bottom:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
 
   <img src="decor/aqua_meadow.jpg" alt="" class="wash" loading="lazy" decoding="async"/>
   <img src="decor/flor_amapola.png" alt="" class="petalo hidden md:block" style="left:-3%;top:16%;height:20%;opacity:.18;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);" loading="lazy" decoding="async"/>
@@ -124,7 +125,7 @@
 
 <!-- ============ FILTROS · CATEGORÍAS ============ -->
 <section class="relative z-10 max-w-[1180px] mx-auto px-6 md:px-12 pb-4">
-  <img src="decor/flor_d16.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;bottom:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_d16.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;bottom:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 0%, #000 55%, rgba(0,0,0,0) 100%);"/>
 
 
 
@@ -141,7 +142,7 @@
 
 <!-- ============ ARTÍCULO DESTACADO ============ -->
 <section class="relative overflow-hidden py-10 md:py-14">
-  <img src="decor/flor_d17.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:2.5%;top:6%;height:56%;max-height:520px;min-height:300px;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_d17.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:2.5%;top:6%;height:56%;max-height:520px;min-height:300px;-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
 
 
 
@@ -167,7 +168,7 @@
 
 <!-- ============ REJILLA DE ARTÍCULOS ============ -->
 <section class="relative overflow-hidden py-8 md:py-16">
-  <img src="decor/flor_d18.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;top:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
+  <img src="decor/flor_d18.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;pointer-events:none;user-select:none;z-index:2;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:2.5%;top:6%;height:46%;max-height:430px;min-height:200px;transform:scaleX(-1);-webkit-mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 145% 145% at 100% 100%, #000 55%, rgba(0,0,0,0) 100%);"/>
 
 
 

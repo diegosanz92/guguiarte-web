@@ -11,6 +11,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Parisienne&family=Jost:wght@300;400;500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&display=swap" rel="stylesheet"/>
 <style>
+  @media(max-width:767px){img.florx{display:block!important;width:88px!important;height:auto!important;max-height:none!important;min-height:0!important;opacity:.95;z-index:2!important;}}
   html,body{overflow-x:hidden;max-width:100%;}
   @font-face{font-family:'Angella White';src:url('fonts/angella-white.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
   :root{ --cream:#fffbf8; --green:#33413a; --ink:#3f3428; --terra:#b06a45; --soft:#6f5c46; --sage:#6e7d68; }
@@ -123,7 +124,7 @@
     </div>
     <a href="index.html"><img src="logo_guguiarte.png" alt="Guguiarte" class="h-8 md:h-10 w-auto max-w-full" loading="lazy" decoding="async"/></a>
     <div class="flex items-center gap-5 absolute right-5 md:right-14 top-1/2 -translate-y-1/2" style="color:var(--soft);">
-      <a class="material-symbols-outlined text-[21px]" href="#" title="Buscar">search</a>
+      <a class="material-symbols-outlined text-[21px] hidden md:inline-block" href="#" title="Buscar">search</a>
       <a class="material-symbols-outlined text-[21px]" href="tienda.html" title="Carrito">shopping_bag</a>
       <button type="button" class="material-symbols-outlined text-[23px] md:hidden" style="background:none;border:0;cursor:pointer;color:inherit;padding:0;" onclick="document.getElementById('mobmenu').classList.toggle('hidden')">menu</button>
     </div>
@@ -184,7 +185,7 @@
 
 <!-- ============ IMAGEN DESTACADA ============ WP: the_post_thumbnail -->
 <section class="relative z-10 max-w-[1040px] mx-auto px-6 md:px-0 mb-14 md:mb-20">
-  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:38%;height:54%;transform:scaleX(-1);"/>
+  <img src="decor/flor_zinnia.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;top:38%;height:54%;transform:scaleX(-1);"/>
 
 
 
@@ -197,7 +198,7 @@
 
 <!-- ============ CUERPO + BARRA LATERAL ============ -->
 <section class="relative overflow-hidden pb-8">
-  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:40%;height:40%;"/>
+  <img src="decor/flor_pensamiento.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:40%;height:40%;"/>
 
 
 
@@ -333,7 +334,7 @@
 
 <!-- ============ PREGUNTAS FRECUENTES ============ (coincide con el FAQPage JSON-LD · extracción por IA) -->
 <section class="relative overflow-hidden py-14 md:py-20" style="background:rgba(255,255,255,.4);border-top:1px solid rgba(63,52,40,.1);">
-  <img src="decor/flor_clavel.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;bottom:22%;height:54%;transform:scaleX(-1);"/>
+  <img src="decor/flor_clavel.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));right:0%;bottom:22%;height:54%;transform:scaleX(-1);"/>
 
 
 
@@ -362,7 +363,7 @@
 
 <!-- ============ ARTÍCULOS DE INTERÉS ============ WP: WP_Query relacionados por categoría, excl. actual -->
 <section class="relative overflow-hidden py-16 md:py-24" style="border-top:1px solid rgba(63,52,40,.12);">
-  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:2%;height:56%;"/>
+  <img src="decor/flor_amapola_blanca.png" alt="" class="hidden md:block florx" data-flor-sec style="position:absolute;z-index:2;pointer-events:none;user-select:none;filter:drop-shadow(0 12px 26px rgba(51,48,42,.16));left:0%;top:2%;height:56%;"/>
 
 
 
